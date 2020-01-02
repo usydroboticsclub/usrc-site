@@ -42,8 +42,6 @@ addConveyorSegment("starter", {
                 this.boxes.forEach(i => {
                     i.draw(settings.x + settings.w / 2, settings.y + i.position);
                     i.position += 2;
-                    inputTunnel.front();
-                    dolloper.front();
                 })
                 this.boxes = this.boxes.filter(i => {
                     if (i.position > settings.l) {
@@ -94,6 +92,8 @@ addConveyorSegment("starter", {
                 }
                 if (anteTick % 100 == 99 && dolloperBeam) dolloperBeam.remove();
             }
+            inputTunnel.front();
+            dolloper.front();
 
         }
         this.addBox = (box) => {

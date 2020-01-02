@@ -2,26 +2,24 @@
     let page = document.createElement("div");
     page.innerHTML = /*html*/`
     <style>
-        @font-face {
-            font-family: PlayPretend;
-            src: url("Play Pretend.otf") format("opentype");
-        }
         #supertitle {
-            font-family: PlayPretend;
-            font-size: 200px;
+            font-family: the_led_display_stregular;
+            font-weight: 100;
+            font-size: 100px;
             letter-spacing: 20px;
             margin: 20px;
+            min-height:350px;
         }
     </style>
-    <div data-page="home" style="background:grey; box-shadow: 10px 20px 0px 0px black;">
+    <div data-page="home" style="background:grey; box-shadow: 10px 20px 0px 0px black;">    
             <div>
-                <h1 id="supertitle">USRC</h1>
+                <h1 id="supertitle">USYD Robotics Club</h1>
                 <h3>Delivering hands-on experience for the next generation of roboticists.</h3>
-                <button>Get involved</button><button>Sponsor us</button>
+                <button class="involveBtn">Get involved</button><button class="sponsorbtn">Sponsor us</button>
             </div>
             <div>
                 <h2>What we do</h2>
-                <p>USRC serves two primary functions: Supporting USYD Robotics teams in external competitions, hosting
+                <p>USRC serves two primary functions: Supporting USYD Robotics teams in external competitions, and hosting
                     USYD
                     based robotics events.</p>
             </div>
@@ -41,7 +39,8 @@
                     open days, and even run our own inter-uni competition, the <a href="swarmcomp">USRC Swarm Robotics
                         Competition.</a></p>
             </div>
-        </div>
+    </div>
     `
     addPage(page);
+    cycleImage(page);
 })()

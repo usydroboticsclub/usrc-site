@@ -9,6 +9,36 @@
             margin: 0;
             background: repeating-linear-gradient(-6deg, #222, #333, #222 60px);
         }
+
+        .sponsorBtn {
+            background: #da0000;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px;
+        }
+
+        .involveBtn {
+            background: #ca0000;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px;
+        }
+
+        div[data-page] {
+            background: grey;
+            margin: 20px;
+        }
+
+
+        div[data-page]>div {
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -20,22 +50,16 @@
     <script src="blank_segments.js"></script>
     <!-- Custom segments -->
     <script src="segments/starter.js"></script>
+    <script src="segments/stamper.js"></script>
+    <!-- Helpers -->
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </link>
     <!-- Pages -->
     <script src="pages/frontpage.js"></script>
     <script src="pages/whoweare.js"></script>
     <script src="pages/events.js"></script>
     <script src="pages/gallery.js"></script>
     <script src="pages/sponsors.js"></script>
-    <style>
-        div[data-page] {
-            background: grey;
-            margin: 20px;
-        }
-
-        div[data-page]>div {
-            padding: 20px;
-        }
-    </style>
     <script>
         /*
         function showPage(root, pageName, dataName = "page", showStyle = "block") {
@@ -79,6 +103,13 @@
             }
         }*/
         generate();
+        Array.from(document.querySelectorAll(".sponsorbtn")).forEach(i => i.addEventListener("click", () => {
+            window.open("mailto:usydroboticsclub@gmail.com?subject=Propsective Sponsorship&body=Hi, I'd like to sponsor the robotics club! Let's get in touch.");
+        }))
+
+        Array.from(document.querySelectorAll(".involvebtn")).forEach(i => i.addEventListener("click", () => {
+            window.open("mailto:usydroboticsclub@gmail.com?subject=Sign me up!&body=Hi, I'd like to be added to the USRC mailing list! Thanks!");
+        }))
     </script>
 </body>
 

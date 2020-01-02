@@ -139,4 +139,25 @@ function generate() {
     requestAnimationFrame(flow);
 }
 
-let boxes = [];
+
+function cycleImage(page) {
+    let images = [
+        "images/back1.jpg",
+        "images/buildnight.jpg",
+        "images/bntwoo.jpg",
+        "images/drcdrc.jpg",
+        "images/nyoom.png"
+    ];
+    let imgIndex = Math.floor(Math.random() * images.length);
+    let pageback = page.querySelector("[data-page]");
+    setInterval(() => {
+        imgIndex++;
+        pageback.style.background = `url(${images[imgIndex % images.length]})`;
+        pageback.style.backgroundSize = `100% 100%`;
+    }, 5000);
+    pageback.style.background = `url(${images[imgIndex]})`;
+    let middleDiv = document.createElement("div");
+    middleDiv.style.cssText = `background: rgba(0,0,0,0.4)`;
+    Array.from(pageback.children).forEach(i => middleDiv.appendChild(i));
+    pageback.appendChild(middleDiv);
+}

@@ -16,6 +16,12 @@
         box-shadow: 5px 10px 0px 0px black;
         border: 1px solid black;
     }
+    #stafftiles img{
+        width:16vw;
+        height:300px;
+        margin: 0 auto;
+        display: block;
+    }
 </style>
 <div data-page="whoweare">
     <div>
@@ -37,42 +43,47 @@
             facilitate and train others for competitions and more.</p>
         <div id="stafftiles">
             <div>
-                <img>
+                <img src="staffpics/livy.jpg">
                 <h3>Livy Smith</h3>
                 <p>President</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/nathan.jpg">
                 <h3>Nathan Zhang</h3>
                 <p>Vice president</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/null.png">
                 <h3>Victor Kuo</h3>
                 <p>Treasurer</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/marco.png">
+                <h3>Marco Tupaz</h3>
+                <p>Secretary</p>
+            </div>
+            <div>
+                <img src="staffpics/kyte.jpg">
                 <h3>Kyte Gurner</h3>
                 <p>Communications</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/null.png">
                 <h3>Frank Shen</h3>
                 <p>General Exec</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/steven.png">
                 <h3>Steven Liu</h3>
                 <p>General Exec</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/tommcabe.png">
                 <h3>Tom Mcabe</h3>
                 <p>General Exec</p>
             </div>
             <div>
-                <img>
+                <img src="staffpics/johnsumskas.jpg">
                 <h3>John Sumskas</h3>
                 <p>RobotX Lead</p>
             </div>
@@ -81,4 +92,5 @@
 </div>
     `
     addPage(page);
+    cycleImage(page);
 })()
