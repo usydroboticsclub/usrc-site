@@ -53,7 +53,7 @@
                 <p>Vice president</p>
             </div>
             <div>
-                <img src="staffpics/null.png">
+                <img src="staffpics/victor.jpg">
                 <h3>Victor Kuo</h3>
                 <p>Treasurer</p>
             </div>
