@@ -69,7 +69,7 @@
                 <p>Communications</p>
             </div>
             <div>
-                <img src="staffpics/null.png">
+                <img src="staffpics/frankshen.png">
                 <h3>Frank Shen</h3>
                 <p>General Exec</p>
             </div>
