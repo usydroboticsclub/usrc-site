@@ -7,6 +7,7 @@ var svg = SVG(d);
 var pages = [];
 function addPage(div) {
     pages.push(div);
+    div.style.height="100%";
 }
 
 var segments = {};
@@ -45,25 +46,29 @@ function addConveyorSegment(segment_name, segment) {
  *  }
  * }
  */
+async function wait(t) {
+    return new Promise((res) => setTimeout(res, t));
+}
 
-
-function generate() {
+async function generate() {
     //create the pages
     let page_proportion = 0.9;
     let pagedimensions = [];
     let cumulativeHeight = document.querySelector("#topbar").scrollHeight;
     let conveyorWidth = (1 - page_proportion) * document.body.clientWidth;
     let shadowAllocation = 50;
-    pages.forEach((v, i) => {
+    for (let i=0;i<pages.length;i++){
+        let v=pages[i];
         //create an element for it
         let myContainer = svg.foreignObject(page_proportion * document.body.clientWidth, 0)
             .move((i % 2) * (1 - page_proportion) * document.body.clientWidth, cumulativeHeight);
         myContainer.appendChild(v);
+        await wait(100);
         let myHeight = v.scrollHeight + shadowAllocation;
         myContainer.height(v.scrollHeight);
         cumulativeHeight += myHeight + conveyorWidth;
         pagedimensions.push(myHeight);
-    })
+    }
     svg.node.style.height = cumulativeHeight;
 
     //layout the conveyor segments

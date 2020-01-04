@@ -15,6 +15,7 @@
         padding: 10px;
         box-shadow: 5px 10px 0px 0px black;
         border: 1px solid black;
+        background:rgba(100,100,100,0.7);
     }
     #stafftiles img{
         width:16vw;
