@@ -1,5 +1,6 @@
 (() => {
     let page = document.createElement("div");
+    page.style.minHeight="300px";
     page.innerHTML = /*html*/`
     <style>
     #events_list>div{
@@ -17,10 +18,10 @@
     </style>
     <div style="min-height:500px" data-page="events">
         <h1>Events</h1>
-        <div style="display:flex; height:100%; width: 100%;">
+        <div style="display:flex; min-height:500px; width: 100%;">
             <div style="display:flex; flex-direction:column; flex:0 0 10vw" id="events_list">
             </div>
-            <div style="padding: 0.5em; height: 100%; flex-grow:1" id="event_space">
+            <div style="padding: 0.5em; min-height:500px; flex-grow:1" id="event_space">
             </div>
         </div>
     </div>

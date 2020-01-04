@@ -7,7 +7,7 @@ var svg = SVG(d);
 var pages = [];
 function addPage(div) {
     pages.push(div);
-    div.style.height="100%";
+    //div.style.height="100%";
 }
 
 var segments = {};
@@ -60,7 +60,7 @@ async function generate() {
     for (let i=0;i<pages.length;i++){
         let v=pages[i];
         //create an element for it
-        let myContainer = svg.foreignObject(page_proportion * document.body.clientWidth, 0)
+        let myContainer = svg.foreignObject(page_proportion * document.body.clientWidth, 10000)
             .move((i % 2) * (1 - page_proportion) * document.body.clientWidth, cumulativeHeight);
         myContainer.appendChild(v);
         await wait(100);
@@ -135,7 +135,7 @@ async function generate() {
     function flow() {
         boxCountdown--;
         if (boxCountdown == 0) {
-            boxCountdown = 200;
+            boxCountdown = 2000;
             actualSegments[0].addBox(new box());
         }
         actualSegments.forEach(i => i.update());
