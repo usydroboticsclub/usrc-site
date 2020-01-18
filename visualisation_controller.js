@@ -158,7 +158,7 @@ function cycleImage(page) {
     setInterval(() => {
         imgIndex++;
         pageback.style.background = `url(${images[imgIndex % images.length]})`;
-        pageback.style.backgroundSize = `100% auto`;
+        pageback.style.backgroundSize = `cover`;
     }, 5000);
     pageback.style.background = `url(${images[imgIndex]})`;
     let middleDiv = document.createElement("div");
