@@ -59,7 +59,7 @@ The boat is a roughly car-sized vehicle and relies on technologies such as IMU, 
 
     function populateEventsList() {
         events.forEach((v, i) => {
-            page.querySelector("#events_list").appendChild(htmlwrap(`<div data-index="${i}">${v.title}</div>`));
+            page.querySelector("#events_list").appendChild(htmlwrap(`<div data-index="${i}" onmouseover="" style="cursor: pointer;">${v.title}</div>`));
         })
     }
     populateEventsList();
