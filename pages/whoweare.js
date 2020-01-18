@@ -19,7 +19,7 @@
     }
     #stafftiles img{
         width:16vw;
-        height:300px;
+        height:auto;
         margin: 0 auto;
         display: block;
     }
