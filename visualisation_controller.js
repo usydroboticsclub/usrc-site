@@ -33,7 +33,7 @@ function cycleImage(page) {
     setInterval(() => {
         imgIndex++;
         pageback.style.background = `url(${images[imgIndex % images.length]})`;
-        pageback.style.backgroundSize = `100% 100%`;
+        pageback.style.backgroundSize = `cover`;
     }, 5000);
 
     pageback.style.background = `url(${images[imgIndex]})`;

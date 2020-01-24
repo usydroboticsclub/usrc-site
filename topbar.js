@@ -9,6 +9,7 @@
         }
         #topbar>div:hover[data-pagetarget] {
             background: darkred;
+            cursor:pointer;
         }
         #topbar {
             display: flex;
@@ -21,6 +22,7 @@
         }
         #topbar button.cta{
             margin:0;
+            cursor: pointer;
         }
     </style>
     <div data-pagetarget="home"><img src="images/logo.png" style="height:2em"></div>
