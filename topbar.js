@@ -39,21 +39,9 @@
         let el = e.target;
         while (el != document.body) {
             if (el.dataset.pagetarget) {
-                console.log(el.dataset.pagetarget);
                 //sneaky adjust to make the scrolling align properly
-                document.querySelector(`[data-page="${el.dataset.pagetarget}"]`).scrollIntoView({ behavior: "smooth" });
-                let pastScroll = window.scrollY;
-                function correctScroll() {
-                    if (window.scrollY == pastScroll) {
-                        if (window.scrollY) {
-                            window.scroll(0, window.scrollY - document.querySelector("#topbar").scrollHeight);
-                        }
-                    } else {
-                        pastScroll = window.scrollY;
-                        setTimeout(correctScroll, 100);
-                    }
-                }
-                setTimeout(correctScroll, 100);
+                routeTo(el.dataset.pagetarget);
+                window.location.href=window.location.href.split("#")[0]+"#"+el.dataset.pagetarget;
                 break;
             }
             else {
@@ -63,3 +51,9 @@
 
     })
 })();
+
+// Also add a mini hash router
+function routeTo(pageName){
+    let y=document.querySelector(`[data-page="${pageName}"]`).offsetTop- document.querySelector("#topbar").scrollHeight;
+    window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
+}

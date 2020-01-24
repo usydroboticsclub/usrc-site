@@ -1,6 +1,7 @@
 (() => {
     let page = document.createElement("div");
-    page.style.minHeight="300px";
+    page.style.minHeight = "300px";
+    page.style.cssText = `display:flex; height:100%; flex-direction:column`;
     page.innerHTML = /*html*/`
     <style>
     #events_list>div{
@@ -16,9 +17,9 @@
         background: rgba(255,135,0,0.5);
     }
     </style>
-    <div style="min-height:500px" data-page="events">
+    <div style="min-height:500px; flex:1;height:100%;" data-page="events">
         <h1>Events</h1>
-        <div style="display:flex; min-height:500px; width: 100%;">
+        <div style="display:flex; min-height:500px; width: 100%; flex:1">
             <div style="display:flex; flex-direction:column; flex:0 0 10vw" id="events_list">
             </div>
             <div style="padding: 0.5em; min-height:500px; flex-grow:1" id="event_space">
@@ -54,6 +55,13 @@ The boat is a roughly car-sized vehicle and relies on technologies such as IMU, 
             Frequency: "Once per semester",
             description:
                 `A one day build-a-thon to get a robot up and running from scratch. We'll provide parts, instructions and support, for you to get your journey started!`
+        },
+        {
+            title: "Swarm Robotics Competition (Software)",
+            Frequency: "Annual (S1W5 -> Winter break)",
+            description:
+                `Compete against fellow USYD Students to code for a swarm of 5 robots to compete against opposing swarms in a playing field.`,
+            readmore: `https://drive.google.com/open?id=1wtjGA9rUmP5_g_toLfNMBLpMgaxbiZWa`
         }
     ]
 
@@ -70,18 +78,20 @@ The boat is a roughly car-sized vehicle and relies on technologies such as IMU, 
 
     function focusOnEvent(index) {
         let generatedHTML = "";
-        let _renderOrder = ["title", "*", "description"];
+        let _renderOrder = ["title", "*", "description", "readmore"];
         let renderOrder = [];
         for (let i in events[index]) {
-            if (!_renderOrder.includes(i) && i != "description" && i != "title") renderOrder.push(i);
+            if (!_renderOrder.includes(i)) renderOrder.push(i);
         }
         let starseen = false;
         _renderOrder.forEach(i => {
             if (i == "*") starseen = true;
-            else if (starseen) {
-                renderOrder.push(i);
-            } else {
-                renderOrder.unshift(i);
+            else if (events[index][i]) {
+                if (starseen) {
+                    renderOrder.push(i);
+                } else {
+                    renderOrder.unshift(i);
+                }
             }
         })
         renderOrder.forEach(i => {
@@ -91,6 +101,9 @@ The boat is a roughly car-sized vehicle and relies on technologies such as IMU, 
                     break;
                 case "description":
                     generatedHTML += `<div>${events[index].description}</div>`;
+                    break;
+                case 'readmore':
+                    generatedHTML += `<div><a href="${events[index].readmore}" target="_blank">Read More</a></div>`;
                     break;
                 default:
                     generatedHTML += `<p><u>${i}</u>: ${events[index][i]}</p>`;

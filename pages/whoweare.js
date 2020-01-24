@@ -10,7 +10,7 @@
     }
 
     #stafftiles>* {
-        flex: 0 0 18vw;
+        flex: 0 0 15vw;
         margin: 10px;
         padding: 10px;
         box-shadow: 5px 10px 0px 0px black;
@@ -18,8 +18,8 @@
         background:rgba(100,100,100,0.7);
     }
     #stafftiles img{
-        width:16vw;
-        height:300px;
+        width:14vw;
+        height:14vw;
         margin: 0 auto;
         display: block;
     }
