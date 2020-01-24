@@ -43,7 +43,7 @@
             if (el.dataset.pagetarget) {
                 //sneaky adjust to make the scrolling align properly
                 routeTo(el.dataset.pagetarget);
-                window.location.href=window.location.href.split("#")[0]+"#"+el.dataset.pagetarget;
+                window.history.pushState({}, el.dataset.pagetarget, window.location.href.split("#")[0] + "#" + el.dataset.pagetarget)
                 break;
             }
             else {
@@ -55,7 +55,7 @@
 })();
 
 // Also add a mini hash router
-function routeTo(pageName){
-    let y=document.querySelector(`[data-page="${pageName}"]`).offsetTop- document.querySelector("#topbar").scrollHeight;
+function routeTo(pageName) {
+    let y = document.querySelector(`[data-page="${pageName}"]`).offsetTop - document.querySelector("#topbar").scrollHeight;
     window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
 }
