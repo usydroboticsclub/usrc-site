@@ -13,7 +13,7 @@ function generate() {
     pages.forEach(i => {
         document.body.appendChild(i);
     });
-    if (window.location.href.indexOf("#")){
+    if (window.location.href.indexOf("#")!=-1){
         routeTo(window.location.href.split("#")[1]);
     }
     
