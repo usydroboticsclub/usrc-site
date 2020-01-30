@@ -23,7 +23,17 @@
         #topbar button.cta{
             margin:0;
             cursor: pointer;
+
+            background: #da0000;
+            color: white;
+            border: none;
+            border-radius: 0.5em;
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px;
+            cursor:pointer;
         }
+
     </style>
     <div data-pagetarget="home"><img src="images/logo.png" style="height:2em"></div>
     <div data-pagetarget="whoweare">Who we are</div>
@@ -59,3 +69,12 @@ function routeTo(pageName) {
     let y = document.querySelector(`[data-page="${pageName}"]`).offsetTop - document.querySelector("#topbar").scrollHeight;
     window.scrollTo({ top: y, left: 0, behavior: 'smooth' });
 }
+
+
+Array.from(document.querySelectorAll(".sponsorbtn")).forEach(i => i.addEventListener("click", () => {
+    window.open("mailto:usydroboticsclub@gmail.com?subject=Propsective Sponsorship&body=Hi, I'd like to sponsor the robotics club! Let's get in touch.");
+}))
+
+Array.from(document.querySelectorAll(".involvebtn")).forEach(i => i.addEventListener("click", () => {
+    window.open("mailto:usydroboticsclub@gmail.com?subject=Sign me up!&body=Hi, I'd like to be added to the USRC mailing list! Thanks!");
+}))
