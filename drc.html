@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Droid Racing Competition</title>
+    <link rel="icon" width="auto" href="images/logo.png">
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" type="text/css" href="css/drc.css">
+
+    <link rel="stylesheet" type="text/css" href="css/title_font.css">
+
+
+</head>
+<body>
+    
+    
+    <div id="header">
+
+        <div class="homepage">
+            <button class="dropbtn">
+                <a href="usydrobotics.club"><img src="images/logo.png" style="height:2em"></a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="usydrobotics.club">Who We Are</a>
+            </button>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="">Projects</a>
+            </button>
+            <div class="dropdown-content">
+                <a href="">Droid Racing Competition</a>
+                <a href="swarmcomp.usydrobotics.club">Swarm Competition</a>
+                <a href="usydrowbot.org">RobotX</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="gallery">Gallery</a>
+            </button>
+        </div>
+
+        <div class="dropdown">
+            <button class="dropbtn">
+                <a href="">About Us</a>
+            </button>
+            <!--
+            <div class="dropdown-content">
+                <a href="aboutus">About Us</a>
+                <a href="theTeam">The Team</a>
+                <a href="acfrMentors">ACFR Mentors</a>
+            </div>
+            -->
+        </div>
+
+        <div style="flex: 1 0 auto"></div>
+
+        <div class="header_link">
+            <button class="cta sponsorbtn">Sponsor Us</button>
+            <button class="cta involvebtn">Get involved</button>
+        </div>
+
+    </div>
+
+    <div id="main" class="main">
+
+        <section class="container">
+            <div class="content">
+                <h1>DROID RACING COMPETITION</h1>
+                <p>Hosted by the Queensland <br> University of Technology</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="subcontent">
+                <p>
+                    Hosted by the Queensland University of Technology, the Droid Racing Challenge is a competition where universities around Australia build their own self-driving droids that race around a track.&nbsp;Each droid incorporates computer vision that lets it avoid obstacles and drive around the course. Our first entry to this competition was in 2018, where we placed 7th out of 8 teams, however with the challenge being quite difficult, numerous teams had dropped out before the races even began. Not a bad result for our first year!&nbsp;
+                </p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="subcontent">
+
+
+                <p class="" style="white-space:pre-wrap;">Improving on what we learnt that year, we stepped up to the 2019 challenge with three new teams which saw veterans and enthusiasts join the race. This time around, two of our teams succeeded in placing second and third!</p>
+                
+                
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="subcontent">
+
+                <h1>What Next?</h1>
+                
+                <p class="" style="white-space:pre-wrap;">With the 2020 DRC just around the corner, we are eager to prove how we've improved. USRC will continue to foster keen new competitors as well as alumni to compete in this challenge. We are excited to explore what the future of QUT's Droid Racing Challenge offers and look forward to competing again. 
+                </p>
+            </div>
+        </section>
+
+        <video id="v0" tabindex="0", autobuffer preload>
+            <source type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' src="videos/v1.MP4"></source>
+        </video>
+
+
+
+
+
+        
+        <script>
+            function scrollVideo() {
+                var video = $('#v0').get(0),
+                    videoLength = video.duration,
+                    scrollPosition = $(document).scrollTop();
+                
+                    var clientHeight = document.getElementById('main').clientHeight;
+
+                video.currentTime = (scrollPosition / (clientHeight - $(window).height() / 2)) * videoLength;
+            }
+
+            $(window).scroll(function (e) {
+                scrollVideo();
+            });
+        </script>
+
+
+
+        <script>
+    
+            var frameNumber = 0, // start video at frame 0
+            // lower numbers = faster playback
+            playbackConst = 800,
+            // get page height from video duration
+            setHeight = document.getElementById("set-height"),
+            // select video element
+            vid = document.getElementById('v0');
+            // var vid = $('#v0')[0]; // jquery option
+            
+            // dynamically set the page height according to video length
+            vid.addEventListener('loadedmetadata', function() {
+            setHeight.style.height = Math.floor(vid.duration) * playbackConst + "px";
+            });
+            
+            
+            // Use requestAnimationFrame for smooth playback
+            function scrollPlay(){
+            var frameNumber = window.pageYOffset/playbackConst;
+            vid.currentTime = frameNumber;
+            window.requestAnimationFrame(scrollPlay);
+            }
+            
+            window.requestAnimationFrame(scrollPlay);
+            
+            console.log(window.pageYOffset);
+            // console.log(setHeight.style.height);
+        
+        </script>
+    </div>
+
+    
+    <div class="connect">
+        <section id="learn">
+            <div id="text"> 
+                <h1>What Does it Involve?</h1>
+                <p>
+                    Teams of six to eight build a droid either from an existing framework or from scratch. By integrating their own onboard computers, motors electronic speed control (ESC) and out provided Intel REALSENSE camera, teams design their robots to perform simple tasks as quickly as possible. 
+                </p>
+                <p>
+                    The objective is to race between two colour indicated tracks to beat an opposing team, whilst also avoiding coloured obstacles. Scores are based on the teams ability to stay within the track, avoid obstacles and beat the opposing droid. 
+                </p>
+                <p>
+                    Focusing on mechanical, software and electrical engineering, the competition applies and extends what is learnt at university. It offers a fun and challenging way to approach engineering while working in teams. 
+
+                    Individuals also get the opportunity to travel to Queensland to compete in the challange. 
+                </p>
+                <p>
+                    If you wish to learn more, feel free to get in contact with us!
+                </p>
+            </div>
+        </section>
+
+        <!-- <section>
+            <div id="gallery">
+
+            </div>
+        </section> -->
+
+        <section id="youtube">
+            <div id="text">
+                <h1>
+                    Check Out Our Videos 
+                </h1>
+                <p>
+                    See how our past teams have learnt from the competition and what they wish they could have done better.
+                </p>
+
+                <iframe width="800" height="500" src="https://www.youtube.com/embed/j2ZLJJhJBtY" frameborder="0"></iframe>
+            </div>
+        </section>
+
+        <section id="join">
+            <div class="row">
+                <div class="column">
+                    <h1>Interested in Joining?</h1>
+                    <p>
+                        Think you've got what it takes to build a droid to win the race? Keen on learning new things about robotics or apply what you've learnt? Come join us at the USYD Robotics Club and sign up to compete in the 2020 Challange! 
+                    </p>
+                    <button class="btn">
+                        Sign up for the Team
+                    </button>
+                </div>
+
+                <div class="column">
+                    <h1>Interested in Supporing Us?</h1>
+                    <p>
+                        Like what you see but you're not eligible to join? You can also help us by sponsoring what we do. Whether it be the club or a project, we always appreciate any kind of support you are able to provide. Check out our prospectus to see the best way you can support us!
+                    </p>
+                    <button class="btn">
+                        Prospectus
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="sponsor">
+            <div class="row">
+                <div class="column">
+                    <h3>
+                        2019 Competition Sponsored By:
+                    </h3>
+                    <br>
+                    <h1>NSW Chief Scientist & Engineer</h1>
+                </div>
+                
+                <div class="column">
+                    <img src="images/sponsors/nsw_govt_col.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="footer">
+                <ul>
+                    <li><a href="usydrobotics.club">Home</a></li>
+                    <li><b>&copy; USYD Robotics Club</b></li>
+                </ul>
+            </div>
+        </section>
+
+        
+    </div>
+
+
+
+    <!-- JAVA SCRIPT -->
+    <!-- <script src="js/drc.js" charset="utf-8"></script> -->
+    
+</body>
+</html>
