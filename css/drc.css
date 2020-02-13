@@ -229,6 +229,7 @@ body{
 #join{
     padding:10px;
     background-color: #f4ff56;
+    text-align: center;
 }
 
 #join .btn{
@@ -317,7 +318,7 @@ body{
     text-decoration: none;
 }
 
-.connect section:nth-of-type(1) {
+/* .connect section:nth-of-type(1) {
     height: 500px;
 }
 .connect section:nth-of-type(2) {
@@ -331,6 +332,6 @@ body{
 }
 .connect section:nth-of-type(5) {
     height: 51px;
-}
+} */
 
 
