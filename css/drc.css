@@ -214,18 +214,20 @@ body{
     font-size: 20px;
 }
 
-@media screen and (max-width:801px){
-    #youtube #ytube{
-        width:320;
-        height:200; 
-    }
-}
 @media screen and (min-width:801px){
     #youtube #ytube{
         width:800;
         height:500; 
     }
 }
+
+@media screen and (max-width:501px){
+    #youtube #ytube{
+        width:320;
+        height:200; 
+    }
+}
+
 
 #youtube{
     padding:10px;
