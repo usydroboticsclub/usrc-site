@@ -221,12 +221,12 @@ body{
     }
 }
 
-@media screen and (max-width:800px) and (min-width:401px){
+/* @media screen and (max-width:800px) and (min-width:401px){
     #youtube #ytube{
         width:320;
         height:200; 
     }
-}
+} */
 
 
 #youtube{
