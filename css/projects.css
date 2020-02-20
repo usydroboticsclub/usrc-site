@@ -107,13 +107,26 @@ body{
 }
 
 
+@media screen and (min-width:801px){
+    .container{
+        display:grid;
+            
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 10% 40% 40% 10%;
+
+        grid-template-areas:". . title .  . " 
+                            "L L title R R" 
+                            "L L title R R"
+                            ". . title . . ";
+    }
+}
 
 /* TITLE */
 
 .title > h1{
     font-family: the_led_display_stregular;
     font-weight: 100;
-    font-size: 60px;
+    font-size: 40px;
     letter-spacing: 20px;
     /* position:relative; */
     justify-content: center;
@@ -123,13 +136,14 @@ body{
 .title{
     grid-area:title;
     position:relative;
-    text-align: center;   
+    text-align: center; 
+    border: 100px, 100px;  
 }
 
 .title > img{
     /* overflow: hidden; */
     /* width: 100%; */
-    max-height: 300px;
+    max-height: 240px;
     /* object-fit: cover; */
 }
 
@@ -148,11 +162,11 @@ body{
     position: relative;
     margin: auto;
     overflow: hidden;
-    width: 360px;
+    width: 270px;
 }
 .image-box img {
     max-width: 100%;
-    max-height: 239px;
+    max-height: 180px;
     transition: all 1.0s;
     filter: brightness(80%);
     display: block;
@@ -175,9 +189,15 @@ body{
     font-weight: bolder;
     padding: 12px 24px;
     cursor: pointer;
-  }
+}
 
+#right{
+    grid-area: R;
+}
 
+#left{
+    grid-area: L;
+}
 
 
 
