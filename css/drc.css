@@ -216,17 +216,17 @@ body{
 
 @media screen and (min-width:801px){
     #youtube #ytube{
-        width:800;
-        height:500; 
+        width:800px;
+        height:500px; 
     }
 }
 
-/* @media screen and (max-width:800px) and (min-width:401px){
+@media screen and (max-width:800px) and (min-width:401px){ */
     #youtube #ytube{
-        width:320;
-        height:200; 
+        width:320px;
+        height:200px; 
     }
-} */
+}
 
 
 #youtube{
