@@ -119,16 +119,41 @@ body{
 #supertitle {
 
     position: absolute;
-    top: 20%;
+    top: 18%;
     font-family: the_led_display_stregular;
     font-weight: 100;
     font-size: 80px;
     letter-spacing: 20px;
-    margin: 0px 20px;
+    margin: 50px 20px;
     min-height:350px;
     color: white;
     text-align: center;
     display: inline-block;
+
+    -webkit-animation: glow 5s ease-in-out infinite alternate;
+    -moz-animation: glow 5s ease-in-out infinite alternate;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+    text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336;
+    }
+    to {
+    text-shadow: 0 0 30px #f44336, 0 0 40px #f44336, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336, 0 0 80px #f44336;
+    }
+}
+
+#toptext{
+    position: absolute;
+    top: 76%;
+    margin:0px 300px;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+
 }
 
 body,html{
@@ -136,7 +161,7 @@ body,html{
 }
 
 .top-container{
-    height:100%;
+    height:120%;
 }
 
 .parallax, .parallaxtitle{
@@ -180,18 +205,18 @@ body,html{
 
 
 .parallaxtitle{
-    min-height: 100%;
+    min-height: 120%;
 }
 
 .content{
     /* height:500px; */
     text-align: justify;
-    margin: 50px 180px;
+    padding: 50px 180px;
 }
 
 
 #join{
-    padding:10px;
+    padding:50px 180px;
     text-align: center;
 }
 
@@ -205,6 +230,11 @@ body,html{
     display: inline-block;
     font-size: 16px;
     cursor: pointer;
+}
+
+#join .btn :hover{
+    background-color: #f4183A;
+
 }
 
 #join .row{
