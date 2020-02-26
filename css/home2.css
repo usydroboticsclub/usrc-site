@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
+@media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+}
+
 
 body{
     margin: 0px;
@@ -111,7 +117,9 @@ body{
 
 /* MAIN */
 #supertitle {
-    position: static;
+
+    position: absolute;
+    top: 20%;
     font-family: the_led_display_stregular;
     font-weight: 100;
     font-size: 80px;
@@ -127,18 +135,6 @@ body,html{
     height:100%;
 }
 
-/* .supertitle{
-    position: absolute;
-    text-align: center;
-    background-color: #111;
-    filter: opacity(60%);
-    padding: 10% 0px;
-    font-size: 25px;
-    letter-spacing: 10px;
-} */
-
-
-
 .top-container{
     height:100%;
 }
@@ -149,6 +145,8 @@ body,html{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    /* opacity: 0.65; */
 
 
     /* opacity: 70%; */
@@ -158,14 +156,67 @@ body,html{
 
 .parallax{
     min-height: 70%;
+    text-align: center;
+    color:white;
+    height:500px;
+
 }
+
+.parallax span{
+    font-size: 36px;
+    font-weight: bold;
+    margin:0px;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-transform: capitalize;
+    color:white;
+}
+
+.content h2{
+    text-align: center;
+}
+
 
 .parallaxtitle{
     min-height: 100%;
 }
 
 .content{
-    height:500px;
+    /* height:500px; */
+    text-align: justify;
+    margin: 50px 180px;
+}
+
+
+#join{
+    padding:10px;
+    text-align: center;
+}
+
+#join .btn{
+    background-color: #f44336;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#join .row{
+    display:flex;
+}
+
+#join .row .column{
+    flex:100%;
+    margin:0px 30px;
+    /* padding:80px; */
+    font-size: 16px;
+
 }
 
 
