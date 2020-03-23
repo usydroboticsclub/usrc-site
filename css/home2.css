@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
-@media only screen and (max-device-width: 1024px) {
+/* @media only screen and (max-device-width: 1024px) {
     .parallax {
       background-attachment: scroll;
     }
-}
+} */
 
 
 body{
@@ -24,9 +24,26 @@ body{
     /* position: relative; */
     width:100%;
     top: 0px;
+    height:80px;
     background: black;
     z-index: 100;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform : translate3d(0, 0, 0);
 }
+
+.sticky {
+    height:80px;
+    position: fixed;
+    top: 0;
+    display:none;
+    width: 100%;
+}
+  
+/* .sticky + .main {
+    padding-top: 80px;
+} */
+
 
 .dropbtn {
     background-color: black;
@@ -113,22 +130,25 @@ body{
     cursor:pointer;
 }
 
-
+body,html{
+    height:100%;
+}
 
 /* MAIN */
 #supertitle {
 
-    position: absolute;
-    top: 18%;
+    /* position: center; */
+    text-align: center;
+
+    top: 30%;
     font-family: the_led_display_stregular;
     font-weight: 100;
-    font-size: 80px;
+    font-size: 74px;
     letter-spacing: 20px;
-    margin: 50px 20px;
-    min-height:350px;
+    margin: auto 20px;
+    /* min-height:350px; */
     color: white;
-    text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
 
     -webkit-animation: glow 5s ease-in-out infinite alternate;
     -moz-animation: glow 5s ease-in-out infinite alternate;
@@ -145,9 +165,15 @@ body{
 }
 
 #toptext{
+    /* position: absolute; */
     position: absolute;
-    top: 76%;
-    margin:0px 300px;
+    top:80%;
+    width:auto;
+    /* position:   ; */
+    /* top: 76%; */
+    /* height:100px; */
+
+    margin:auto 300px;
     padding: 30px;
     color: white;
     font-size: 20px;
@@ -156,13 +182,8 @@ body{
 
 }
 
-body,html{
-    height:100%;
-}
 
-.top-container{
-    height:120%;
-}
+
 
 .parallax, .parallaxtitle{
     /* Create the parallax scrolling effect */
@@ -252,15 +273,7 @@ body,html{
 
 
 
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-  
-/* .sticky + .main {
-    padding-top: 102px;
-} */
+
 
 
 

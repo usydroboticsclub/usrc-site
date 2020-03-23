@@ -18,3 +18,19 @@ function myFunction() {
     header.classList.remove("sticky");
   }
 }
+
+
+// $(window).onscroll(function()
+//   {
+//     if( $(window).scrollTop() > 79 )
+//       {
+//         $(".header").css({position: 'fixed'});
+//         $(".sticky").css({display: 'block'});
+//       } 
+//       else 
+//       {
+//         $(".header").css({position: 'static', top: '-79px'});
+//         $(".sticky").css({display: 'none'});
+//       }
+//   }
+// );
