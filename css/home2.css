@@ -1,9 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 
+/* @media only screen and (max-device-width: 1024px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+} */
+
 
 body{
-    margin: -8px;
+    margin: 0px;
     font-family: Lato;
+    height:100%;
 }
 
 
@@ -11,15 +18,32 @@ body{
 #header{
     grid-area:header;
     display:flex;
-    padding:8px 0px 0px 0px;
+    /* padding:8px 0px 0px 0px; */
     background-color: black;
     flex-direction: row;
-    position: relative;
+    /* position: relative; */
     width:100%;
     top: 0px;
+    height:80px;
     background: black;
     z-index: 100;
+
+    -webkit-transform: translate3d(0, 0, 0);
+    transform : translate3d(0, 0, 0);
 }
+
+.sticky {
+    height:80px;
+    position: fixed;
+    top: 0;
+    display:none;
+    width: 100%;
+}
+  
+/* .sticky + .main {
+    padding-top: 80px;
+} */
+
 
 .dropbtn {
     background-color: black;
@@ -36,7 +60,7 @@ body{
 .homepage {
     /* margin: 5px; */
     float:left;
-    padding:20px 10px 20px 10px;
+    padding:12px 8px 12px 8px;
     position: relative;
     display: inline-block;
 }
@@ -62,14 +86,14 @@ body{
     right:0px;
     background-color: #f9f9f9;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    /* box-shadow: 0px 6px 10px 0px rgba(0,0,0,0.2); */
     z-index: 1;
 }
 
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px 16px;
+    padding: 8px 10px;
     text-decoration: none;
     display: block;
 }
@@ -88,7 +112,7 @@ body{
 }
 
 .header_link{
-    margin:auto 20px auto 20px;
+    margin:auto 10px auto 10px;
 }
 
 /* For the Red link buttones */
@@ -100,150 +124,120 @@ body{
     color: white;
     border: none;
     border-radius: 0.5em;
-    padding: 10px;
+    padding: 8px;
     font-size: 1em;
-    margin: 10px;
+    margin: 8px;
     cursor:pointer;
 }
 
-
-
+body,html{
+    height:100%;
+}
 
 /* MAIN */
+#supertitle {
 
-.main {
-    background-color: #c6d7de;
-    /* font-family: 'Montserrat'; */
-    font-family: 'Lato';
-    padding: 3em;
-}
-
-#v0 {
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    height: 100%;
-    /* z-index:-100; */
-    /* transform: translateX(-50%); */
-
-}
-
-
-
-.main section {
-    z-index: 1;
-    position: relative;
-}
-
-.main .content {
-    position: sticky;
-    position: -webkit-sticky;
-    width: 100%;
-    top: 33.3%;
-}
-
-.main h1 {
-    font-size: 3em;
-    background: #fff;
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 0;
-}
-
-
-.main .subcontent {
-    position: sticky;
-    position: -webkit-sticky;
-    width: 100%;
-    top: 25%;
-}
-
-.main .subcontent p{
-    background: rgba(255, 255, 255, 0.6); 
-    display: inline-block;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 0 55% 0 0;
-}
-
-.main p { font-size: 1.5em; }
-
-.main section:nth-of-type(1) {
-    height: 1200px;
-}
-.main section:nth-of-type(2) {
-    height: 1200px;
-}
-.main section:nth-of-type(3) {
-    height: 1200px;
-}
-.main section:nth-of-type(4) {
-    height: 1200px;
-}
-
-/* .connect{
-    display:flex;
-    padding:10px;
-    background-color: #fc7777;
-    flex-direction: row;
-    position: relative;
-    width:100%;
-    top: 0px;
-    z-index: 100;
-} */
-
-
-.connect{
-    margin:0px 8px;
-    font-family: Lato;
-    flex-direction: row;
-    position: relative;
-    width:100%;
-    top: 0px;
-    z-index: 100;
-}
-
-#learn{
-    padding:10px;
-    background-color: #fc7777;
-}
-
-#learn #text{
-    padding:0px 200px;
-    font-size: 20px;
-}
-
-@media screen and (min-width:801px){
-    #youtube #ytube{
-        width:800px;
-        height:500px; 
-    }
-}
-
-@media screen and (max-width:800px) and (min-width:401px){ */
-    #youtube #ytube{
-        width:320px;
-        height:200px; 
-    }
-}
-
-
-#youtube{
-    padding:10px;
-    background-color: #ffc966;
-}
-
-#youtube #text{
+    /* position: center; */
     text-align: center;
-    font-size: 20px;
 
-    /* padding:0px 200px; */
+    top: 30%;
+    font-family: the_led_display_stregular;
+    font-weight: 100;
+    font-size: 74px;
+    letter-spacing: 20px;
+    margin: auto 20px;
+    /* min-height:350px; */
+    color: white;
+    /* display: inline-block; */
+
+    -webkit-animation: glow 5s ease-in-out infinite alternate;
+    -moz-animation: glow 5s ease-in-out infinite alternate;
+    animation: glow 5s ease-in-out infinite alternate;
 }
+
+@-webkit-keyframes glow {
+    from {
+    text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336;
+    }
+    to {
+    text-shadow: 0 0 30px #f44336, 0 0 40px #f44336, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336, 0 0 80px #f44336;
+    }
+}
+
+#toptext{
+    /* position: absolute; */
+    position: absolute;
+    top:80%;
+    width:auto;
+    /* position:   ; */
+    /* top: 76%; */
+    /* height:100px; */
+
+    margin:auto 300px;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+
+}
+
+
+
+
+.parallax, .parallaxtitle{
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /* opacity: 0.65; */
+
+
+    /* opacity: 70%; */
+    /* filter: brightness(80%); */
+
+}
+
+.parallax{
+    min-height: 70%;
+    text-align: center;
+    color:white;
+    height:500px;
+
+}
+
+.parallax span{
+    font-size: 36px;
+    font-weight: bold;
+    margin:0px;
+    position: absolute;
+    left: 0;
+    top: 45%;
+    width: 100%;
+    text-transform: capitalize;
+    color:white;
+}
+
+.content h2{
+    text-align: center;
+}
+
+
+.parallaxtitle{
+    min-height: 120%;
+}
+
+.content{
+    /* height:500px; */
+    text-align: justify;
+    padding: 50px 180px;
+}
+
 
 #join{
-    padding:10px;
-    background-color: #f4ff56;
+    padding:50px 180px;
     text-align: center;
 }
 
@@ -259,39 +253,28 @@ body{
     cursor: pointer;
 }
 
+#join .btn :hover{
+    background-color: #f4183A;
+
+}
+
 #join .row{
     display:flex;
 }
 
 #join .row .column{
-    flex:50%;
-    padding:80px;
-    font-size: 20px;
+    flex:100%;
+    margin:0px 30px;
+    /* padding:80px; */
+    font-size: 16px;
 
 }
 
-#sponsor{
-    padding:10px;
-    background-color: #c6d7de;
-}
 
-#sponsor .row{
-    display:flex;
-}
 
-#sponsor h1{
-    font-size: 3em;
-    font-weight: bolder;
-}
 
-#sponsor .row .column{
-    flex:40%;
-    padding:80px;
-}
 
-#sponsor img{
-    max-width:300px;
-}
+
 
 
 /* FOOTER */
