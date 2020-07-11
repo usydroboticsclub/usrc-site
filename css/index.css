@@ -11,6 +11,7 @@ body{
     margin: 0px;
     font-family: Lato;
     height:100%;
+    width:100%;
 }
 
 
@@ -27,9 +28,10 @@ body{
     height:80px;
     background: black;
     z-index: 100;
+    opacity: 1;
 
-    -webkit-transform: translate3d(0, 0, 0);
-    transform : translate3d(0, 0, 0);
+    /* -webkit-transform: translate3d(0, 0, 0);
+    transform : translate3d(0, 0, 0); */
 }
 
 .sticky {
@@ -37,7 +39,7 @@ body{
     position: fixed;
     top: 0;
     display:none;
-    width: 100%;
+    /* width: 100%; */
 }
   
 /* .sticky + .main {

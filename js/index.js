@@ -6,18 +6,47 @@ Array.from(document.querySelectorAll(".sponsorbtn")).forEach(i => i.addEventList
     window.open("mailto:usydroboticsclub@gmail.com?subject=Sign me up!&body=Hi, I'd like to be added to the USRC mailing list! Thanks!");
   }))
 
-window.onscroll = function() {myFunction()};
+
+
+
+window.onscroll = function() {stickyHeader()};
 
 var header = document.getElementById("header");
 var sticky = header.offsetTop;
 
-function myFunction() {
+function stickyHeader() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
   } else {
     header.classList.remove("sticky");
   }
 }
+
+
+
+// CODE TO MAKE HEADER DISAPPEAR
+
+$("header").hide();
+
+$("html").mousemove(function( event ) {
+    $("header").show();
+
+    timerStop();
+    timerStart();
+});
+
+function timerStart() {
+    myVar = setTimeout(function(){
+        $("header").hide();
+    }, 1000);
+}
+function timerStop() {
+    if(typeof myVar != 'undefined'){
+        clearTimeout(myVar);
+    }
+}
+
+
 
 
 // $(window).onscroll(function()
