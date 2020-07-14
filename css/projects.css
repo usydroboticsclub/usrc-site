@@ -107,7 +107,7 @@ body{
 }
 
 
-@media screen and (min-width:801px){
+@media screen and (min-width:1000px){
     .container{
         display:grid;
             
@@ -120,6 +120,7 @@ body{
                             ". . title . . ";
     }
 }
+
 
 /* TITLE */
 
@@ -249,3 +250,21 @@ body{
 
 
 
+@media only screen and (max-width:1000px){
+    .title > h1{
+        font-family: the_led_display_stregular;
+        font-weight: 100;
+        font-size: 40px;
+        letter-spacing: 16px;
+        /* position:relative; */
+        justify-content: center;
+        color: white;
+    }
+    
+    .title{
+        grid-area:title;
+        position:relative;
+        text-align: center; 
+        border: 30px, 30px;  
+    }
+}

@@ -133,9 +133,9 @@
         top: 15%;
         font-family: the_led_display_stregular;
         font-weight: 100;
-        font-size: 40px;
+        font-size: 39px;
         letter-spacing: 20px;
-        margin: auto 20px;
+        margin: auto 18px;
         /* min-height:350px; */
         color: white;
         /* display: inline-block; */
@@ -162,7 +162,7 @@
         margin:auto 50px;
         padding: 5px;
         color: white;
-        font-size: 10px;
+        font-size: 16px;
         text-align: center;
         background-color: rgb(0,0,0,0.5);
     }
@@ -212,7 +212,7 @@
         /* height:500px; */
         text-align: justify;
         padding: 50px 100px;
-        font-size: 11px;
+        font-size: 16px;
     }
 
 
@@ -239,7 +239,7 @@
     }
 
     #join .row{
-        display:flex;
+        /* display:flex; */
     }
 
     #join .row .column{
@@ -249,13 +249,6 @@
         font-size: 16px;
 
     }
-
-
-
-
-
-
-
 
     /* FOOTER */
     #footer{
@@ -484,7 +477,7 @@
     #toptext{
         /* position: absolute; */
         position: absolute;
-        top:80%;
+        top:70%;
         width:auto;
         /* position:   ; */
         /* top: 76%; */
