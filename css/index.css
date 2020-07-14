@@ -139,20 +139,9 @@
         /* min-height:350px; */
         color: white;
         /* display: inline-block; */
-
-        -webkit-animation: glow 5s ease-in-out infinite alternate;
-        -moz-animation: glow 5s ease-in-out infinite alternate;
-        animation: glow 5s ease-in-out infinite alternate;
+        text-shadow: 0 0 3px black, 0 0 15px #f44336;
     }
 
-    @-webkit-keyframes glow {
-        from {
-        text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336;
-        }
-        to {
-        text-shadow: 0 0 30px #f44336, 0 0 40px #f44336, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336, 0 0 80px #f44336;
-        }
-    }
 
     #toptext{
         /* position: absolute; */
