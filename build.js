@@ -32,7 +32,7 @@ function getAllUnder(base) {
     let publics = getAllUnder('public');
     for (let i of publics) {
         fs.mkdirSync('transfer/' + i.slice(0, i.lastIndexOf("/")).slice("public/".length), { recursive: true });
-        fs.renameSync(i, 'transfer/' + i.slice("public/".length));
+        fs.copyFileSync(i, 'transfer/' + i.slice("public/".length));
     }
     execSync("git checkout master");
     //nerf all old files

@@ -163,8 +163,8 @@ export default class Header extends React.Component {
                 </div> : null}</span>
             )}
             <div style={{ flex: "0 1 100%" }}></div>
-            <button className="cta sponsorbtn">Sponsor Us</button>
-            <button className="cta involvebtn">Get involved</button>
+            <button className="cta sponsorbtn" onClick={() => { window.open("mailto:usydroboticsclub@gmail.com?subject=Propsective Sponsorship&body=Hi, I'd like to sponsor the robotics club! Let's get in touch.", "_blank"); }}>Sponsor Us</button>
+            <button className="cta involvebtn" onClick={() => { window.open("https://docs.google.com/forms/d/e/1FAIpQLSc9QQoIaEmkkLqnC5TqP5IdDen-lymCtMb-Hd6SO8L9PXmY0g/viewform", "_blank") }}>Get involved</button>
         </Div >
     }
 }

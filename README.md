@@ -10,6 +10,7 @@ Then:
 2. `git checkout develop`
 3. `git pull`
 4. make changes
+5. test changes by running `gatsby develop` and going to `localhost:8000` in your browser
 5. `node build.js` (will do everything including update the site)
 
 ## Long start
