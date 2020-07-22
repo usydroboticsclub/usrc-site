@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,110 +18,127 @@
 
 
 
+    
+<body>   
 
-<body>
+
+    <div class="container">
 
 
-    <div id="header">
+        
+        <div id="header">
 
-        <div class="homepage">
-            <button class="dropbtn">
-                <a href="index"><img src="images/logo.png" style="height:2em"></a>
-            </button>
-        </div>
+            <div class="homepage">
+                <button class="dropbtn">
+                    <a href="index"><img src="images/logo.png" style="height:2em"></a>
+                </button>
+            </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">
-                <a href="">Who We Are</a>
-            </button>
-        </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="">Who We Are</a>
+                </button>
+            </div>
+            
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="">Events</a>
+                </button>
+            </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">
-                <a href="">Events</a>
-            </button>
-        </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="gallery">Gallery</a>
+                </button>
+            </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">
-                <a href="gallery">Gallery.heade</a>
-            </button>
-        </div>
-
-        <div class="dropdown">
-            <button class="dropbtn">
-                <a href="">About Us</a>
-            </button>
-            <!--
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href="">About Us</a>
+                </button>
+                <!--
                 <div class="dropdown-content">
                     <a href="aboutus">About Us</a>
                     <a href="theTeam">The Team</a>
                     <a href="acfrMentors">ACFR Mentors</a>
                 </div>
                 -->
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <a href=""><h4>Sponsors</h4></a>
+                </button>
+            </div>
+
+            <div style="flex: 1 0 auto"></div>
+
+            <div class="header_link">
+                <button class="cta sponsorbtn">Sponsor Us</button>
+                <button class="cta involvebtn">Get involved</button>
+            </div>
+
+        </div>
+        
+        <div class="title" id="title"> 
+        
+            <img class="image" src="images/back1.jpg" alt="">
+            <h1>Gallery</h1>
         </div>
 
-        <div class="dropdown">
-            <button class="dropbtn">
-                <a href="">
-                    <h4>Sponsors</h4>
-                </a>
-            </button>
+
+        <div id="title1">
+            <h1>
+                What we've been up to
+            </h1>
+
         </div>
 
-        <div style="flex: 1 0 auto"></div>
+        <div id="title2">
 
-        <div class="header_link">
-            <button class="cta sponsorbtn">Sponsor Us</button>
-            <button class="cta involvebtn">Get involved</button>
+            <!--
+            <p>
+                Follow our adventures on our Instagram <a href="https://www.instagram.com/usydrowbot/" target="_blank"><b>@UsydRowBot</b></a> as we work our way towards maritime domination.
+            </p>
+            -->
+
         </div>
+
+
+        
+        <div id="gallery" class="row">
+            <div class="column">
+                <img src="images/back1.jpg" alt="USRC 2018" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/bntwoo.jpg" alt="Build Night 2019S2" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/buildnight.jpg" alt="Build Night 2019S1" onclick="myFunction(this);">
+            </div>
+            <div class="column">
+                <img src="images/drcdrc.jpg" alt="Droid Racing Competition" onclick="myFunction(this);">
+            </div>
+        </div>
+        
+        
+        <div id="imExpand" class="imExpand">
+            <!-- Close the image -->
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+        
+            <!-- Expanded image -->
+            <img id="expandedImg" style="width:100%">
+        
+            <!-- Image text -->
+            <div id="imgtext"></div>
+        </div>
+
+
 
     </div>
-
-    <div class="title" id="title">
-
-        <img class="image" src="images/back1.jpg" alt="">
-        <h1>Gallery</h1>
-    </div>
-
-
-    <div id="title1">
-        <h1>
-            What we've been up to
-        </h1>
-
-    </div>
-    <div id="imExpand" class="imExpand">
-        <!-- Close the image -->
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-
-        <!-- Expanded image -->
-        <img id="expandedImg" style="width:100%">
-
-        <!-- Image text -->
-        <div id="imgtext"></div>
-    </div>
-
-    <div id="gallery" class="row">
-        <div class="column">
-            <img src="images/back1.jpg" alt="USRC 2018" onclick="myFunction(this);">
-        </div>
-        <div class="column">
-            <img src="images/bntwoo.jpg" alt="Build Night 2019S2" onclick="myFunction(this);">
-        </div>
-        <div class="column">
-            <img src="images/buildnight.jpg" alt="Build Night 2019S1" onclick="myFunction(this);">
-        </div>
-        <div class="column">
-            <img src="images/drcdrc.jpg" alt="Droid Racing Competition" onclick="myFunction(this);">
-        </div>
-    </div>
-
-
-
 
     <div id="footer">
-
+        
         <ul>
             <li><a href="index">Home</a></li>
             <li><b>&copy; USYD Robotics Club</b></li>
@@ -136,5 +152,7 @@
 
 
 </body>
-
 </html>
+
+
+
