@@ -124,18 +124,6 @@ export default class Header extends React.Component {
         super(props);
     }
 
-<<<<<<< Updated upstream
-=======
-    componentDidMount() {
-        if (typeof window != "undefined") {
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { window.dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'UA-173263940-1');
-        }
-    }
-
->>>>>>> Stashed changes
     render() {
         function isNotHere(href) {
             if (typeof window != "undefined") {
