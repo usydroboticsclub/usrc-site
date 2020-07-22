@@ -164,7 +164,7 @@ export default class Header extends React.Component {
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
 body{
     margin: 0px;
-    font-family: Lato;
+    font-family: Lato, sans-serif;
     width:100%;
 }
 body,html{
