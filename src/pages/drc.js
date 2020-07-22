@@ -132,7 +132,8 @@ export default class Home extends React.Component {
         position: fixed;
         bottom: 0;
         right: 0;
-        height: 100%;
+        width: 100%;
+        z-index:-1;
     }
 
     /* MAIN */
@@ -142,6 +143,8 @@ export default class Home extends React.Component {
         /* font-family: 'Montserrat'; */
         font-family: 'Lato';
         padding: 3em;
+        z-index:-1;
+        position:relative;
     }
 
     .main section {
@@ -177,17 +180,11 @@ export default class Home extends React.Component {
 
     .main p { font-size: 1.5em; }
 
-    .main section:nth-of-type(1) {
-        height: 1200px;
+    .main section:not(:last-of-type) {
+        margin-bottom: 40vh;
     }
-    .main section:nth-of-type(2) {
-        height: 1200px;
-    }
-    .main section:nth-of-type(3) {
-        height: 1200px;
-    }
-    .main section:nth-of-type(4) {
-        height: 1200px;
+    .main section{
+        height: 100vh;
     }
 
     .connect{
@@ -381,7 +378,7 @@ export default class Home extends React.Component {
                     </div>
                 </section>
                 <video id="v0" tabIndex="0" autobuffer preload>
-                    <source type='video/webm' src="videos/v1.webm"></source>
+                    <source type='video/webm' src="/videos/v1.webm"></source>
                 </video>
             </div>
 

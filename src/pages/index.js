@@ -109,7 +109,7 @@ export default function Home() {
 
 }
 
-  @media only screen and (min-width:768px){
+  @media only screen and (max-width:768px){
     #supertitle{
       top: 15%;
       font-size: 39px;
