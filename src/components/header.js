@@ -127,7 +127,7 @@ export default class Header extends React.Component {
     componentDidMount() {
         if (typeof window != "undefined") {
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() { window.dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'UA-173263940-1');
         }
@@ -156,7 +156,7 @@ export default class Header extends React.Component {
                 `}</style>
                 {this.props.style}
                 {this.props.stylesheet ? this.props.stylesheet.split(" ").map(i =>
-                    <link key={i} rel="stylesheet" href={"css/" + i}></link>
+                    <link key={i} rel="stylesheet" href={"static/css/" + i}></link>
                 ) : null}
 
 

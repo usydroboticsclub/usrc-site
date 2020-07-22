@@ -34,3 +34,7 @@ If you're reading this, chances that you are a little lost re: how to maintain a
 4. Once you're done with the changes, you need to:
   - run `gatsby build`
   - `git push`
+
+## FAQ
+### Where do i put css files?
+- in public/static/css, for now. still working on it.
