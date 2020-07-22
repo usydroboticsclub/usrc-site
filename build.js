@@ -31,56 +31,42 @@ function getAllUnder(base) {
     console.log("gatsby building...");
     execSync("gatsby build --prefix-paths");
 
-    console.log("transfer from public to transfer");
-    // drag the files from public to transfer 
-    let publics = getAllUnder('public');
-    for (let i of publics) {
-        fs.mkdirSync('transfer/' + i.slice(0, i.lastIndexOf("/")).slice("public/".length), { recursive: true });
-        fs.copyFileSync(i, 'transfer/' + i.slice("public/".length));
-    }
-
-    console.log("moving to master");
-    
-    execSync("git checkout master");
+    console.log("deleting scraps");
     //nerf all old files
     try {
         let nerfs = JSON.parse(String(fs.readFileSync("nerfs.json")));
         console.log(nerfs);
         for (let i of nerfs) {
-            try{
+            try {
                 fs.unlinkSync(i);
-            }catch (e){
+            } catch (e) {
             }
         }
     } catch (e) {
         console.log("nothing to delete");
     }
-    try {
-        execSync("git merge develop");
-    } catch (err) {
-        console.log("merge failed, please resolve.");
-        return;
-    }
-    // drag the files from transfer to outside
-    let transfers = getAllUnder('transfer');
+
+    console.log("transfer from public to outside");
     let newNerfs = [];
-    for (let i of transfers) {
-        if (i.slice(0, i.lastIndexOf("/")).slice("transfer/".length).length > 0) {
-            fs.mkdirSync(i.slice(0, i.lastIndexOf("/")).slice("transfer/".length), { recursive: true });
+    // drag the files from public to transfer 
+    let publics = getAllUnder('public');
+    for (let i of publics) {
+        if (i.slice(0, i.lastIndexOf("/")).slice("public/".length).length) {
+            fs.mkdirSync(i.slice(0, i.lastIndexOf("/")).slice("public/".length), { recursive: true });
         }
-        fs.renameSync(i, i.slice("transfer/".length));
-        newNerfs.push(i.slice("transfer/".length));
+        fs.copyFileSync(i, i.slice("public/".length));
+        newNerfs.push(i.slice("public/".length));
     }
+
     //save files to nerf
     fs.writeFileSync("nerfs.json", JSON.stringify(newNerfs));
     execSync('git add .');
-    try{
+    try {
         execSync('git commit -m "auto-deploy"');
-    }catch (e){
+    } catch (e) {
         console.log("nothing to deploy, hope this looks right");
     }
     execSync('git push');
-    execSync('git checkout develop');
 })();
 
 // switch to index build html
