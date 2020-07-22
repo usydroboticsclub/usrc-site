@@ -156,7 +156,7 @@ export default class Header extends React.Component {
                 `}</style>
                 {this.props.style}
                 {this.props.stylesheet ? this.props.stylesheet.split(" ").map(i =>
-                    <link key={i} rel="stylesheet" href={"css/" + i}></link>
+                    <link key={i} rel="stylesheet" href={"/static/css/" + i}></link>
                 ) : null}
 
 
