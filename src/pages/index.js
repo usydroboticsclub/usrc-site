@@ -3,8 +3,181 @@ import Header from "../components/header.js"
 
 export default function Home() {
   return <div>
-    <Header stylesheet="index.css font.css">
+    <Header stylesheet="font.css">
     </Header>
+    <style>{`
+  #supertitle{
+    text-align: center;
+
+    top: 30%;
+    font-family: the_led_display_stregular;
+    font-weight: 100;
+    font-size: 74px;
+    letter-spacing: 20px;
+    margin: auto 20px;
+    text-shadow: 0 0 3px orange, 0 0 15px #f44336;
+    color: white;
+  }
+
+  #toptext{
+    position: absolute;
+    top:70%;
+    width:auto;
+    margin:auto 300px;
+    padding: 30px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    background-color: rgb(0,0,0,0.5);
+ }
+
+ .parallax, .parallaxtitle{
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.parallax{
+  min-height: 70%;
+  text-align: center;
+  color:white;
+  height:500px;
+
+}
+
+.parallax span{
+  font-size: 36px;
+  font-weight: bold;
+  margin:0px;
+  position: absolute;
+  left: 0;
+  top: 45%;
+  width: 100%;
+  text-transform: capitalize;
+  color:white;
+}
+
+.content h2{
+  text-align: center;
+}
+
+
+.parallaxtitle{
+  min-height: 120%;
+}
+
+.content{
+  /* height:500px; */
+  text-align: justify;
+  padding: 50px 180px;
+}
+
+#join{
+  padding:50px 180px;
+  text-align: center;
+}
+
+#join .btn{
+  background-color: #f44336;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#join .btn :hover{
+  background-color: #f4183A;
+
+}
+
+#join .row{
+  display:flex;
+}
+
+#join .row .column{
+  flex:100%;
+  margin:0px 30px;
+  /* padding:80px; */
+  font-size: 16px;
+
+}
+
+  @media only screen and (min-width:768px){
+    #supertitle{
+      top: 15%;
+      font-size: 39px;
+      margin: auto 18px;
+    }
+
+    #toptext{
+      top:80%;
+      margin: auto 50px;
+      padding: 5px;
+      font-size:16px;
+    }
+
+    .content{
+      padding: 50px 100px;
+      font-size: 16px;
+    }
+    #join{
+      padding:50px 50px;
+    }
+  }
+
+
+
+  
+  /* FOOTER */
+  #footer{
+      font-family: Lato;
+  }
+
+  #footer .selected{
+      font-weight:bold;
+  } 
+
+  #footer ul {
+      list-style-type: none;
+      margin: 0px 0px;
+      /* padding: 0; */
+      overflow: hidden;
+      background-color: #333333;
+  }
+
+  #footer li a {
+      float:left;
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 16px;
+      text-decoration: none;
+  }
+  
+  #footer li a:hover {
+      background-color: #111111;
+  }
+
+  #footer li b {
+      float:right;
+      display: block;
+      color: white;
+      text-align: right;
+      padding: 16px;
+      text-decoration: none;
+  }
+
+
+
+
+    `}</style>
     <div className="top-container parallax" style={{
       backgroundImage: "url('images/build-night1.jpg')",
       height: "100vh"
