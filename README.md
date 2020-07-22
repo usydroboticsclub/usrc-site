@@ -1,4 +1,18 @@
-# USRC React website
+# USRC React development
+## Quick start
+Prerequisites:
+- Node.js installed
+  - here: https://nodejs.org/en/download/
+- gatsby-cli installed 
+  - `npm i -g gatsby-cli`
+Then:
+1. `git clone`
+2. `git checkout develop`
+3. `git pull`
+4. make changes
+5. `node build.js` (will do everything including update the site)
+
+## Long start
 If you're reading this, chances that you are a little lost re: how to maintain and use this website, because perhaps you've done some frontend in HTML but you've not used React JS yet.
 1. Let us convince you that React is the right tool to use.
   - We are not developing a single page web application; we have various subpages on our website.
