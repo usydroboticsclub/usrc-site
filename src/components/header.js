@@ -21,7 +21,7 @@ const locations = [
         /*{
             title: "Swarm Competition",
             url: "https://swarmcomp.usydrobotics.club/"
-        }*/, {
+        },*/ {
             title: "RobotX",
             url: "https://robotx.usydrobotics.club/"
         }]
@@ -124,6 +124,18 @@ export default class Header extends React.Component {
         super(props);
     }
 
+<<<<<<< Updated upstream
+=======
+    componentDidMount() {
+        if (typeof window != "undefined") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { window.dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-173263940-1');
+        }
+    }
+
+>>>>>>> Stashed changes
     render() {
         function isNotHere(href) {
             if (typeof window != "undefined") {
