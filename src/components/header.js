@@ -21,7 +21,7 @@ const locations = [
         /*{
             title: "Swarm Competition",
             url: "https://swarmcomp.usydrobotics.club/"
-        }*/, {
+        },*/ {
             title: "RobotX",
             url: "https://robotx.usydrobotics.club/"
         }]
@@ -127,7 +127,7 @@ export default class Header extends React.Component {
     componentDidMount() {
         if (typeof window != "undefined") {
             window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
+            function gtag() { window.dataLayer.push(arguments); }
             gtag('js', new Date());
             gtag('config', 'UA-173263940-1');
         }
@@ -156,16 +156,8 @@ export default class Header extends React.Component {
                 `}</style>
                 {this.props.style}
                 {this.props.stylesheet ? this.props.stylesheet.split(" ").map(i =>
-                    <link key={i} rel="stylesheet" href={"/static/css/" + i}></link>
+                    <link key={i} rel="stylesheet" href={"css/" + i}></link>
                 ) : null}
-
-
-
-
-                {/*<!-- Global site tag (gtag.js) - Google Analytics -->*/}
-                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-1"></script>
-
-
             </Head>
             <span>
                 <a href={isNotHere("/")}><img src="/images/logo.png" style={{ height: "2em" }} /></a>
@@ -180,8 +172,8 @@ export default class Header extends React.Component {
                 </div> : null}</span>
             )}
             <div style={{ flex: "0 1 100%" }}></div>
-            <button className="cta sponsorbtn" onClick={() => { window.open("mailto:usydroboticsclub@gmail.com?subject=Propsective Sponsorship&body=Hi, I'd like to sponsor the robotics club! Let's get in touch.", "_blank"); }}>Sponsor Us</button>
-            <button className="cta involvebtn" onClick={() => { window.open("https://docs.google.com/forms/d/e/1FAIpQLSc9QQoIaEmkkLqnC5TqP5IdDen-lymCtMb-Hd6SO8L9PXmY0g/viewform", "_blank") }}>Get involved</button>
+            <button className="cta sponsorbtn">Sponsor Us</button>
+            <button className="cta involvebtn">Get involved</button>
         </Div >
     }
 }

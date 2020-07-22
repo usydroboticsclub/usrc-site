@@ -3,19 +3,19 @@ import Header from "../components/header.js"
 
 const showableImages = [
     {
-        url: "images/back1.jpg",
+        url: "../images/back1.jpg",
         title: "USRC in 2018"
     },
     {
-        url: "images/bntwoo.jpg",
+        url: "../images/bntwoo.jpg",
         title: "Build Night 2019S2"
     },
     {
-        url: "images/buildnight.jpg",
+        url: "../images/buildnight.jpg",
         title: "Build Night 2019S1"
     },
     {
-        url: "images/drcdrc.jpg",
+        url: "../images/drcdrc.jpg",
         title: "Droid Racing Competition"
     }
 ]
