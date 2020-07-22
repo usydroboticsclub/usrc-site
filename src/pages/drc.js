@@ -24,8 +24,334 @@ export default class Home extends React.Component {
     }
     render() {
         return <div>
-            <Header stylesheet="drc.css">
+            <Header>
             </Header>
+            <style>{`
+    
+    /* HEADER */
+    #header{
+        grid-area:header;
+        display:flex;
+        padding:8px 0px 0px 0px;
+        background-color: black;
+        flex-direction: row;
+        position: relative;
+        width:100%;
+        top: 0px;
+        background: black;
+        z-index: 100;
+    }
+
+    .dropbtn {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        margin:auto;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .homepage {
+        /* margin: 5px; */
+        float:left;
+        padding:20px 10px 20px 10px;
+        position: relative;
+        display: inline-block;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+        margin:auto 5px auto 5px;
+        float:left;
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn a{
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right:0px;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #f1f1f1}
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+        background-color: #da0000;
+    }
+
+    .header_link{
+        margin:auto 20px auto 20px;
+    }
+
+    /* For the Red link buttones */
+    #header button.cta{
+        margin:0;
+        cursor: pointer;
+        float:right;
+        background: #da0000;
+        color: white;
+        border: none;
+        border-radius: 0.5em;
+        padding: 10px;
+        font-size: 1em;
+        margin: 10px;
+        cursor:pointer;
+    }
+
+
+    #v0 {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        z-index:-1;
+    }
+
+    /* MAIN */
+
+    .main {
+        background-color: #c6d7de;
+        /* font-family: 'Montserrat'; */
+        font-family: 'Lato';
+        padding: 3em;
+        z-index:-1;
+        position:relative;
+    }
+
+    .main section {
+        z-index: 1;
+        position: relative;
+    }
+
+    .main .content {
+        position: sticky;
+        position: -webkit-sticky;
+        width: 100%;
+        top: 33.3%;
+    }
+
+    .main h1 {
+        font-size: 3em;
+        background: #fff;
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 0;
+    }
+
+    .main .subcontent {
+        position: sticky;
+        position: -webkit-sticky;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);    
+    }
+
+
+
+    .main p { font-size: 1.5em; }
+
+    .main section:not(:last-of-type) {
+        margin-bottom: 40vh;
+    }
+    .main section{
+        height: 100vh;
+    }
+
+    .connect{
+        /*margin:0px 8px;*/
+        font-family: Lato;
+        flex-direction: row;
+        position: relative;
+        width:100%;
+        top: 0px;
+        z-index: 100;
+    }
+
+
+    #learn{
+        padding:10px;
+        background-color: #fc7777;
+    }
+
+    #learn #text{
+        padding:0px 200px;
+        font-size: 20px;
+    }
+
+
+
+
+    #youtube{
+        padding:10px;
+        background-color: #ffc966;
+    }
+
+    #youtube #text{
+        text-align: center;
+        font-size: 20px;
+
+        /* padding:0px 200px; */
+    }
+
+    #join{
+        padding:10px;
+        background-color: #f4ff56;
+        text-align: center;
+    }
+
+    #join .btn{
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+
+
+    #join .row .column{
+        flex:50%;
+        padding:80px;
+        font-size: 20px;
+
+    }
+
+    #sponsor{
+        padding:10px;
+        background-color: #c6d7de;
+    }
+
+
+
+    #sponsor h1{
+        font-size: 3em;
+        font-weight: bolder;
+    }
+
+    #sponsor .row .column{
+        flex:40%;
+        padding:80px;
+    }
+
+    #sponsor img{
+        max-width:300px;
+    }
+
+
+    /* FOOTER */
+    #footer{
+        font-family: Lato;
+    }
+
+    #footer .selected{
+        font-weight:bold;
+    } 
+
+    #footer ul {
+        list-style-type: none;
+        margin: 0px 0px;
+        /* padding: 0; */
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    #footer li a {
+        float:left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    #footer li a:hover {
+        background-color: #111111;
+    }
+
+    #footer li b {
+        float:right;
+        display: block;
+        color: white;
+        text-align: right;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    #youtube #ytube{
+        width:800px;
+        height:500px; 
+    }
+
+    .main .subcontent p{
+        background: rgba(255, 255, 255, 0.6); 
+        display: inline-block;
+        padding: 10px 15px;
+        border-radius: 5px;
+        margin: 0 55% 0 0;
+    }
+    
+    #join .row{
+        display:flex;
+    }
+
+    #sponsor .row{
+        display:flex;
+    }
+
+
+    @media only screen and (min-width:800px){
+        #youtube #ytube{
+            width:320px;
+            height:200px; 
+        }
+        .main .subcontent p{
+            margin: 0 55% 0 0;
+        }
+        #sponsor .row .column{
+            padding:30px;
+        }
+        #join .row .column{
+            padding:20px;
+        }
+        #learn{
+            padding:30px;
+        }
+    }
+    `}</style>
             <div id="main" className="main">
                 <section className="container">
                     <div className="content">
