@@ -99,8 +99,8 @@ export default function Home() {
               As we continue to grow and engage in new projects, we are always looking for new people who share the same interest in robotics as we do. Come join us if you wish to take part in our projects or to expand your skills in robotics
                     </p>
 
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc9QQoIaEmkkLqnC5TqP5IdDen-lymCtMb-Hd6SO8L9PXmY0g/viewform">
-              <button className="btn">
+            <a>
+              <button className="btn" onClick={() => { window.location.href = 'https://docs.google.com/forms/d/e/1FAIpQLSc9QQoIaEmkkLqnC5TqP5IdDen-lymCtMb-Hd6SO8L9PXmY0g/viewform' }}>
                 Sign up for the Team
                         </button>
             </a>
@@ -119,8 +119,7 @@ export default function Home() {
             <p>
               Like what you see but you're not eligible to join? You can also help us by sponsoring what we do. Whether it be the club or a project, we always appreciate any kind of support you are able to provide. Check out our prospectus to see the best way you can support us!
                     </p>
-
-            <button className="btn" onclick="window.location.href = 'https://drive.google.com/file/d/1H0j3bRERh7y7lt87-FOnHwaOK_kXSSky/view?usp=sharing';">
+            <button className="btn" onClick={() => { window.location.href = 'https://drive.google.com/file/d/1H0j3bRERh7y7lt87-FOnHwaOK_kXSSky/view?usp=sharing' }}>
               Prospectus
                     </button>
           </div>
