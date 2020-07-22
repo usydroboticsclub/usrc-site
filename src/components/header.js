@@ -150,10 +150,6 @@ export default class Header extends React.Component {
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <title>USYD Robotics Club</title>
                 <link rel="icon" width="auto" href="/images/logo.png?1" />
-                <style>{`
-                body{margin:0;}
-                *{font-family: sans-serif;}
-                `}</style>
                 {this.props.style}
                 {this.props.stylesheet ? this.props.stylesheet.split(" ").map(i =>
                     <link key={i} rel="stylesheet" href={"/static/css/" + i}></link>
@@ -164,7 +160,18 @@ export default class Header extends React.Component {
 
                 {/*<!-- Global site tag (gtag.js) - Google Analytics -->*/}
                 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-1"></script>
+                <style>{`
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+body{
+    margin: 0px;
+    font-family: Lato;
+    width:100%;
+}
+body,html{
+    height:100%;
+}
 
+`}</style>
 
             </Head>
             <span>
