@@ -26,14 +26,21 @@ function getAllUnder(base) {
     } catch (err) {
         console.log("no changes to commit, hope this looks right");
     }
+
+
     console.log("gatsby building...");
     execSync("gatsby build --prefix-paths");
+
+    console.log("transfer from public to transfer");
     // drag the files from public to transfer 
     let publics = getAllUnder('public');
     for (let i of publics) {
         fs.mkdirSync('transfer/' + i.slice(0, i.lastIndexOf("/")).slice("public/".length), { recursive: true });
         fs.copyFileSync(i, 'transfer/' + i.slice("public/".length));
     }
+
+    console.log("moving to master");
+    
     execSync("git checkout master");
     //nerf all old files
     try {
