@@ -438,7 +438,7 @@ export default class Home extends React.Component {
                     </div>
 
                     <div className="column">
-                        <img src="images/sponsors/nsw_govt_col.jpg" alt="" />
+                        <img src="/images/sponsors/nsw_govt_col.jpg" alt="" />
                     </div>
                 </div>
             </div>
