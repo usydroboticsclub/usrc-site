@@ -149,7 +149,7 @@ export default class Header extends React.Component {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <title>USYD Robotics Club</title>
-                <link rel="icon" width="auto" href="/images/logo.png" />
+                <link rel="icon" width="auto" href="/images/logo.png?1" />
                 <style>{`
                 body{margin:0;}
                 *{font-family: sans-serif;}
@@ -168,7 +168,7 @@ export default class Header extends React.Component {
 
             </Head>
             <span>
-                <a href={isNotHere("/")}><img src="/images/logo.png" style={{ height: "2em" }} /></a>
+                <a href={isNotHere("/")}><img src="/images/logo.png?1" style={{ height: "2em" }} /></a>
             </span>
             {locations.map(i => <span><a href={i.url ?
                 isNotHere(i.url)
