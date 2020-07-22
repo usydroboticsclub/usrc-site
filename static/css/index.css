@@ -1,0 +1,199 @@
+    /* MAIN */
+    #supertitle {
+
+        /* position: center; */
+        text-align: center;
+
+        top: 30%;
+        font-family: the_led_display_stregular;
+        font-weight: 100;
+        font-size: 74px;
+        letter-spacing: 20px;
+        margin: auto 20px;
+        /* min-height:350px; */
+        color: white;
+        /* display: inline-block; */
+
+        -webkit-animation: glow 5s ease-in-out infinite alternate;
+        -moz-animation: glow 5s ease-in-out infinite alternate;
+        animation: glow 5s ease-in-out infinite alternate;
+    }
+
+    @-webkit-keyframes glow {
+        from {
+        text-shadow: 0 0 20px #000000, 0 0 30px #000000, 0 0 40px #000000, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336;
+        }
+        to {
+        text-shadow: 0 0 30px #f44336, 0 0 40px #f44336, 0 0 50px #f44336, 0 0 60px #f44336, 0 0 70px #f44336, 0 0 80px #f44336;
+        }
+    }
+
+    #toptext{
+        /* position: absolute; */
+        position: absolute;
+        top:70%;
+        width:auto;
+        /* position:   ; */
+        /* top: 76%; */
+        /* height:100px; */
+
+        margin:auto 300px;
+        padding: 30px;
+        color: white;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgb(0,0,0,0.5);
+
+    }
+
+
+
+
+    .parallax, .parallaxtitle{
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        /* opacity: 0.65; */
+
+
+        /* opacity: 70%; */
+        /* filter: brightness(80%); */
+
+    }
+
+    .parallax{
+        min-height: 70%;
+        text-align: center;
+        color:white;
+        height:500px;
+
+    }
+
+    .parallax span{
+        font-size: 36px;
+        font-weight: bold;
+        margin:0px;
+        position: absolute;
+        left: 0;
+        top: 45%;
+        width: 100%;
+        text-transform: capitalize;
+        color:white;
+    }
+
+    .content h2{
+        text-align: center;
+    }
+
+
+    .parallaxtitle{
+        min-height: 120%;
+    }
+
+    .content{
+        /* height:500px; */
+        text-align: justify;
+        padding: 50px 180px;
+    }
+
+
+    #join{
+        padding:50px 180px;
+        text-align: center;
+    }
+
+    #join .btn{
+        background-color: #f44336;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #join .btn :hover{
+        background-color: #f4183A;
+
+    }
+
+    #join .row{
+        display:flex;
+    }
+
+    #join .row .column{
+        flex:100%;
+        margin:0px 30px;
+        /* padding:80px; */
+        font-size: 16px;
+
+    }
+
+
+
+
+
+
+
+
+    /* FOOTER */
+    #footer{
+        font-family: Lato;
+    }
+
+    #footer .selected{
+        font-weight:bold;
+    } 
+
+    #footer ul {
+        list-style-type: none;
+        margin: 0px 0px;
+        /* padding: 0; */
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    #footer li a {
+        float:left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+    
+    #footer li a:hover {
+        background-color: #111111;
+    }
+
+    #footer li b {
+        float:right;
+        display: block;
+        color: white;
+        text-align: right;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    /* .connect section:nth-of-type(1) {
+        height: 500px;
+    }
+    .connect section:nth-of-type(2) {
+        height: 1400px;
+    }
+    .connect section:nth-of-type(3) {
+        height: 450px;
+    }
+    .connect section:nth-of-type(4) {
+        height: 500px;
+    }
+    .connect section:nth-of-type(5) {
+        height: 51px;
+    } */
+
+}
