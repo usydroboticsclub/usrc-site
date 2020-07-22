@@ -124,6 +124,15 @@ export default class Header extends React.Component {
         super(props);
     }
 
+    componentDidMount() {
+        if (typeof window != "undefined") {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'UA-173263940-1');
+        }
+    }
+
     render() {
         function isNotHere(href) {
             if (typeof window != "undefined") {
@@ -149,6 +158,14 @@ export default class Header extends React.Component {
                 {this.props.stylesheet ? this.props.stylesheet.split(" ").map(i =>
                     <link key={i} rel="stylesheet" href={"css/" + i}></link>
                 ) : null}
+
+
+
+
+                {/*<!-- Global site tag (gtag.js) - Google Analytics -->*/}
+                <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-1"></script>
+
+
             </Head>
             <span>
                 <a href={isNotHere("/")}><img src="/images/logo.png" style={{ height: "2em" }} /></a>
