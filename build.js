@@ -40,7 +40,10 @@ function getAllUnder(base) {
         let nerfs = JSON.parse(String(fs.readFileSync("nerfs.json")));
         console.log(nerfs);
         for (let i of nerfs) {
-            fs.unlinkSync(i);
+            try{
+                fs.unlinkSync(i);
+            }catch (e){
+            }
         }
     } catch (e) {
         console.log("nothing to delete");
