@@ -124,7 +124,6 @@ export default class Header extends React.Component {
         super(props);
     }
 
-<<<<<<< HEAD
     componentDidMount() {
         if (typeof window != "undefined") {
             window.dataLayer = window.dataLayer || [];
@@ -134,8 +133,6 @@ export default class Header extends React.Component {
         }
     }
 
-=======
->>>>>>> develop
     render() {
         function isNotHere(href) {
             if (typeof window != "undefined") {
