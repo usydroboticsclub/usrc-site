@@ -45,7 +45,7 @@ function getAllUnder(base) {
     } catch (e) {
         console.log("nothing to delete");
     }
-
+    return;
     console.log("transfer from public to outside");
     let newNerfs = [];
     // drag the files from public to transfer 
