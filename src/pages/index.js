@@ -305,10 +305,7 @@ export default function Home() {
         <li><a href="https://usydrobotics.club">Home</a></li>
         <li><b>&copy; USYD Robotics Club</b></li>
       </ul>
-    </div>
-
-    <script src="js/index.js" charset="utf-8"></script>
-
+    </div>    
 
   </div >
 }

@@ -132,7 +132,7 @@ export default class Home extends React.Component {
         position: fixed;
         bottom: 0;
         right: 0;
-        width: 100%;
+        top:0;
         z-index:-1;
     }
 
