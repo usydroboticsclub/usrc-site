@@ -12,7 +12,12 @@ class Head extends React.Component {
 
 const locations = [
     {
-        title: "Projects",
+        title: "Activities",
+        url: "/activities",
+        //sub:[] - if there are sub items
+    },
+    {
+        title: "Divisions",
         //url: "projects", //if url doesnt exist dont include it
         sub: [{
             title: "Droid Racing Competition",
@@ -26,11 +31,6 @@ const locations = [
             url: "https://robotx.usydrobotics.club/"
         }]
     },
-    /*{
-        title: "Workshops",
-        url: "",
-        //sub:[] - if there are sub items
-    }*/,
     {
         title: "Gallery",
         url: "/gallery",
