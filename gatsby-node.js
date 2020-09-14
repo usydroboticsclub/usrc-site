@@ -8,5 +8,7 @@ exports.onPreInit = () => {
 }
 
 exports.onPostBuild = () => {
-  fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "docs"))
+  fs.renameSync(path.join(__dirname, "public"), path.join(__dirname, "docs"));
+  // copy the cname to the docs folder
+  fs.copyFileSync(path.join(__dirname, "CNAME"), path.join(__dirname, "docs", "CNAME"));
 }
