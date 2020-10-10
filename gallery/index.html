@@ -1,0 +1,65 @@
+<body>
+    <script src="/header.js"></script>
+    <div style="background: repeating-linear-gradient(-6deg, #222, #333, #222 60px); color: white; height: 100vh;">
+
+        <style>
+            .slideshowContainer {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .slideshowContainer img {
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                margin: 1px;
+                box-sizing: border-box;
+            }
+            
+            .slideshowContainer img:hover {
+                border: 3px solid black;
+            }
+            
+            h1 {
+                padding: 10px 0;
+                margin: 0;
+            }
+        </style>
+        <div style="padding: 0 5vw;">
+            <h1>Gallery</h1>
+            <div>
+                <img class="selectedImage" src="/images/back1.jpg" style="width: 50vw; height: 50vh;"></img>
+                <h2 class="selectedImageText">Click on an image below for more detail!</h2>
+                <div class="slideshowContainer">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const showableImages = [{
+            url: "/images/back1.jpg",
+            title: "USRC in 2018"
+        }, {
+            url: "/images/bntwoo.jpg",
+            title: "Build Night 2019S2"
+        }, {
+            url: "/images/buildnight.jpg",
+            title: "Build Night 2019S1"
+        }, {
+            url: "/images/drcdrc.jpg",
+            title: "Droid Racing Competition"
+        }];
+        showableImages.forEach((i, ii) => {
+            let img = document.createElement("img");
+            img.src = i.url;
+            img.dataset.index = ii;
+            document.querySelector(".slideshowContainer").appendChild(img);
+        })
+        document.querySelector(".slideshowContainer").addEventListener("click", (e) => {
+            if (e.target.dataset.index) {
+                document.querySelector(".selectedImage").src = e.target.src;
+                document.querySelector(".selectedImageText").innerHTML = showableImages[e.target.dataset.index].title;
+            }
+        })
+    </script>
+</body>

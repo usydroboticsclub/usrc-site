@@ -1,0 +1,89 @@
+#header {
+    z-index: 100;
+    display: flex;
+    background-color: black;
+    flex-direction: row;
+    position: sticky;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    background: black;
+}
+
+#header>* {
+    flex: 1 0 auto;
+}
+
+#header a {
+    text-decoration: none;
+    user-select: none;
+}
+
+#header>span {
+    display: inline-block;
+    margin: auto;
+    position: relative;
+}
+
+#header>span>a {
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    padding: 19px 10px;
+}
+
+#header>span:hover>a {
+    background-color: #f10000;
+}
+
+#header>span:hover>div {
+    display: block;
+    position: absolute;
+    left: 0;
+}
+
+#header>span>div {
+    display: none;
+    min-width: 160px;
+    padding: 1px;
+    z-index: 100;
+    top: calc(18px + 1em);
+}
+
+#header>span>div>span>a {
+    padding: 10px;
+    background-color: white;
+    color: black;
+    display: inline-block;
+    width: 100%;
+}
+
+#header>span>div>span>a:hover {
+    background-color: black;
+    color: white;
+}
+
+button.cta {
+    cursor: pointer;
+    background: #da0000;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    padding: 10px;
+    font-size: 1em;
+    margin: auto 10px;
+    cursor: pointer;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+body {
+    margin: 0px;
+    font-family: Lato, sans-serif;
+    width: 100%;
+}
+
+body,
+html {
+    height: 100%;
+}
