@@ -1,4 +1,5 @@
-#header {
+.navbar.navbar {
+    /*This needs to be higher specificity than bootstrap*/
     z-index: 100;
     display: flex;
     background-color: black;
@@ -8,24 +9,36 @@
     top: 0px;
     left: 0px;
     background: black;
+    border-radius: 0;
+    margin: 0;
 }
 
-#header>* {
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar>* {
     flex: 1 0 auto;
 }
 
-#header a {
+.navbar a {
     text-decoration: none;
     user-select: none;
 }
 
-#header>span {
+.navbar>span {
     display: inline-block;
     margin: auto;
     position: relative;
 }
 
-#header>span>a {
+.navbar>span a:focus,
+.navbar>span a:hover {
+    text-decoration: none;
+}
+
+.navbar>span>a {
     color: white;
     font-size: 16px;
     border: none;
@@ -33,17 +46,17 @@
     padding: 19px 10px;
 }
 
-#header>span:hover>a {
+.navbar>span:hover>a {
     background-color: #f10000;
 }
 
-#header>span:hover>div {
+.navbar>span:hover>div {
     display: block;
     position: absolute;
     left: 0;
 }
 
-#header>span>div {
+.navbar>span>div {
     display: none;
     min-width: 160px;
     padding: 1px;
@@ -51,7 +64,7 @@
     top: calc(18px + 1em);
 }
 
-#header>span>div>span>a {
+.navbar>span>div>span>a {
     padding: 10px;
     background-color: white;
     color: black;
@@ -59,7 +72,7 @@
     width: 100%;
 }
 
-#header>span>div>span>a:hover {
+.navbar>span>div>span>a:hover {
     background-color: black;
     color: white;
 }

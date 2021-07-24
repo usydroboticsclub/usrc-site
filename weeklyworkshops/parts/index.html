@@ -1,0 +1,217 @@
+<body>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="/header.js"></script>
+    <style>
+        .square_cntr {
+            position: relative;
+            width: 100%;
+        }
+        
+        .square_cntr:after {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+        }
+        
+        .square_cntr img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+        
+        .non-standard-part {
+            position: relative;
+            border: 1px #c00 solid;
+            box-sizing: border-box;
+        }
+        
+        .non-standard-part::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 2px;
+            z-index: 1;
+            color: white;
+            background: #c00;
+            content: 'Exclusive';
+        }
+        
+        .non-standard-part::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-color: transparent;
+            border-style: solid;
+            content: '';
+            border-width: 1em;
+            border-right-color: #c00;
+            border-top-color: #c00;
+        }
+        
+        .coming-soon {
+            position: relative;
+            border: 1px #cc0 solid;
+            box-sizing: border-box;
+        }
+        
+        .coming-soon::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 2px;
+            z-index: 1;
+            color: white;
+            background: #cc0;
+            content: 'Coming soon';
+        }
+        
+        .coming-soon::after {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-color: transparent;
+            border-style: solid;
+            content: '';
+            border-width: 1em;
+            border-right-color: #cc0;
+            border-top-color: #cc0;
+        }
+    </style>
+    <div class="jumbotron text-center">
+        <h1>Parts index</h1>
+        <p>Here's what you'll find in our weekly workshops kits.</p>
+        <p>Parts marked in red are not part of our standard parts, but they're still open to borrow for experienced members!</p>
+    </div>
+    <div class="container" style="flex: 1 1 auto">
+        <h2>Controllers</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://core-electronics.com.au/media/catalog/product/d/e/device20_1000_1.jpg">
+                </div>
+                <h3>Arduino nano</h3>
+                <p>An arduino nano is a small microprocessor that is the brains of many a robotics project. We also have peripherals for our Arduino nanos, so don't worry about the cabling!</p>
+            </div>
+            <div class="col-sm-4 non-standard-part">
+                <div class="square_cntr">
+                    <img src="https://lh3.googleusercontent.com/L-iN7-aP1TLSa2JJH3Nhz4n6FFuvNltHi5z4SnJ2coYgP_bgS7-F5phdy7_3kG26rsL1_PcW_0P05qRWsnEeisrDSiGFmc5UT5UOEXMbBVSw8XGj-buJMcP_8j3CSNDpQC0lHaI">
+                </div>
+                <h3>ESP32-cam</h3>
+                <p>The ESP32-cam combines a wireless chip, camera and SD card reader along with output ports. However, it operates at 3.3V and is somewhat more expensive than an arduino.</p>
+            </div>
+            <div class="col-sm-4 non-standard-part">
+                <div class="square_cntr">
+                    <img src="https://www.raspberrypi.org/homepage-9df4b/static/raspberry-pi-os-32bit-3697e93ad6828805810ffa5f4651423c.jpg">
+                </div>
+                <h3>Raspberry Pi 3B+</h3>
+                <p>This board is a full-flegded (albeit less powerful) mini computer for heavy processing requirements. You could make a server on wheels!</p>
+            </div>
+        </div>
+        <h2>Miscellaneous</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://images-na.ssl-images-amazon.com/images/I/51l9hdTlmjL.jpg">
+                </div>
+                <h3>Resistors</h3>
+                <p>Resistors are good for tuning the input of analogue signals and regulating diode power.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://core-electronics.com.au/media/catalog/product/t/-/t-043-1_11.png">
+                </div>
+                <h3>Breadboard</h3>
+                <p>You put robotics components on a breadboard so you can link them together.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://cdn.sparkfun.com//assets/parts/3/7/0/4/11026-Jumper_Wires_Standard_7in._M_M_-_30_AWG__30_Pack_-01.jpg">
+                </div>
+                <h3>Jumper wires</h3>
+                <p>Jumper wires help link components together. They come in male-male, male-female and female-female variants.
+                </p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://m.media-amazon.com/images/I/516ntD6q83L._SX342_.jpg">
+                </div>
+                <h3>Push buttons</h3>
+                <p>Push to complete the circuit! Make sure to protect with a resistor.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://au.element14.com/productimages/standard/en_GB/1525564-40.jpg">
+                </div>
+                <h3>LEDs</h3>
+                <p>These light up when you put current through them the right way. We've got red ones and green ones. Make sure you protect them with a resistor!.</p>
+            </div>
+        </div>
+        <h2>Sensors</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://core-electronics.com.au/media/catalog/product/d/e/device6_1000.jpg">
+                </div>
+                <h3>Ultrasonic sensor</h3>
+                <p>An ultrasonic sensor allows a robot to measure the range to an object directly in front of it. It's not very precise, but it's a very cheap sensor.</p>
+            </div>
+            <div class="col-sm-4 coming-soon">
+                <div class="square_cntr">
+                    <img src="https://sc01.alicdn.com/kf/Ha14fdc1e23f040fb9f604e465169cfabp/229374945/Ha14fdc1e23f040fb9f604e465169cfabp.jpg">
+                </div>
+                <h3>Laser rangefinder</h3>
+                <p>Performs the same task as the ultrasound, but with a narrower beam spread so it's more focused. It's also somewhat more expensive.</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://cdn.shopify.com/s/files/1/0080/6617/0943/products/AF-2472-1_512x512.jpg?v=1571712091">
+                </div>
+                <h3>Inertial measurement unit</h3>
+                <p>This unit figures out where your robot is in space, by measuring its acceleration, rotation and compass bearing. It's not always super precise though...</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://images.squarespace-cdn.com/content/v1/59b037304c0dbfb092fbe894/1561135682906-WWEYOIG7JWB7N7W2NKEE/neo6m_main.JPG?format=2500w">
+                </div>
+                <h3>GPS</h3>
+                <p>These hobby grade GPS sensors will locate your robot to the nearest 10 metres on the surface of the earth - which is both really good and really bad, depending on how you think about it.</p>
+            </div>
+        </div>
+        <h2>Actuators</h2>
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="https://core-electronics.com.au/media/catalog/product/f/e/feetech_fs90r_micro_continuous_rotation_servo__pololu_2820__00.jpg">
+                </div>
+                <h3>Servo</h3>
+                <p>A servo gives a robot precise movement. However, our small servos only have a limited range of motion (180 degrees).</p>
+            </div>
+            <div class="col-sm-4">
+                <div class="square_cntr">
+                    <img src="http://cdn.shopify.com/s/files/1/0254/1191/1743/products/2547_additional_geared_hobby_motor_side_8f6bdf84-a6e3-4aaa-ad68-91531815fbd5_1024x.jpg?v=1582130137">
+                </div>
+                <h3>Motor</h3>
+                <p>A motor has an unlimited range of motion but consumes a lot more power and is much less precise. It's great for wheels.</p>
+            </div>
+            <div class="col-sm-4 coming-soon">
+                <div class="square_cntr">
+                    <img src="https://cdn11.bigcommerce.com/s-7gavg/images/stencil/1280x1280/products/489/2633/Stepper_Motor_obl_600__73570.1533576814.png?c=2">
+                </div>
+                <h3>Stepper motor</h3>
+                <p>A stepper motor is both powerful and precise, but requires some additional processing power to keep it going.</p>
+            </div>
+            <div class="col-sm-4 non-standard-part">
+                <div class="square_cntr">
+                    <img src="https://cdn-global-hk.hobbyking.com/media/catalog/product/cache/1/image/660x415/17f82f742ffe127f42dca9de82fb58b1/1/8/183396_1.jpg">
+                </div>
+                <h3>Racecar Chassis</h3>
+                <p>Definitely a step up from the others. This is a mainstay of our DRC teams, but while they're off season we let you have a go with them!</p>
+            </div>
+        </div>
+</body>

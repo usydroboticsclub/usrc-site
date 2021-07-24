@@ -21,4 +21,6 @@ If someone's thrown you to this git repo without an explainer on how the system 
 That's it.
 
 ## TODO
-- Edit activities page so that it aligns with our workshop series documents: https://docs.google.com/document/d/1TB2Nsrp_xu8NzJjku20utEcAFqZWxdUic_TZ1wn3hqM/edit
+- Edit activities page so that it aligns with our workshop series documents; or better still, embed the google doc straight into the page. 
+https://docs.google.com/document/d/1TB2Nsrp_xu8NzJjku20utEcAFqZWxdUic_TZ1wn3hqM/edit
+- Source images from google drive rather than from a static folder here. 

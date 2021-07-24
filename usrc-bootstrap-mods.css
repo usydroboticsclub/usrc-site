@@ -1,0 +1,23 @@
+.btn.btn-primary {
+    background: #da0000;
+    border: none;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+.btn.btn-primary:active:focus,
+.btn.btn-primary:active {
+    background: #ad0000;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+    .col-sm-4.col-sm-4 {
+        width: calc(33% - 25px);
+        margin: 10px;
+    }
+}

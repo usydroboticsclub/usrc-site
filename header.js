@@ -1,33 +1,32 @@
+/**
+ * locations is an array of:
+ * {
+ *  title: "string",
+ *  url: "string",
+ *  sub: (optional) [locations]
+ * }
+ * 
+ */
 const locations = [{
-        title: "Activities",
-        url: "/activities",
-        //sub:[] - if there are sub items
-    }, {
-        title: "Divisions",
-        //url: "projects", //if url doesnt exist dont include it
+        title: "Weekly workshops",
+        url: "/weeklyworkshops",
         sub: [{
-                title: "Droid Racing Competition",
-                url: "/drc"
-            },
-            /*{
-                title: "Swarm Competition",
-                url: "https://swarmcomp.usydrobotics.club/"
-            },*/
-            {
-                title: "RobotX",
-                url: "https://robotx.usydrobotics.club/"
-            }
-        ]
-    }, {
+            title: "Inventory",
+            url: "/weeklyworkshops/parts"
+        }]
+    },
+    {
+        title: "Online tutorials",
+        url: "/onlinetutes",
+    },
+    {
+        title: "Droid Racing Competition",
+        url: "/drc",
+    },
+    {
         title: "Gallery",
         url: "/gallery",
-        //sub:[] - if there are sub items
-    },
-    /*{
-        title: "About us",
-        url: "",
-        //sub:[] - if there are sub items
-    }*/
+    }
 ];
 
 var e = document.createElement("title")
@@ -41,6 +40,13 @@ e.href = "/header.css"
 document.querySelector("head").append(e);
 
 e = document.createElement("link")
+e.rel = "stylesheet";
+e.type = "text/css";
+e.href = "/usrc-bootstrap-mods.css"
+document.querySelector("head").append(e);
+
+
+e = document.createElement("link")
 e.rel = "icon";
 e.width = "auto";
 e.href = "/images/logo.png"
@@ -52,8 +58,7 @@ e.src = "https://www.googletagmanager.com/gtag/js?id=UA-173263940-1";
 document.querySelector("head").append(e);
 
 var q = document.createElement("div");
-q.id = "header";
-
+q.classList.add("navbar");
 
 function mkstring(arr) {
     let part = ``;
@@ -100,3 +105,15 @@ let goToSponsor = () => {
 let goToSignup = () => {
     window.location.href = 'https://forms.gle/cfR4zUj3CRKwmpcm8'
 }
+
+var q = document.createElement("div");
+q.classList.add("navbar");
+q.style.cssText = `
+display:flex; flex-direction: row;`
+q.innerHTML = `
+<span style="flex: 1 1 90%"></span>
+<b style = "text-align: right; flex: 0 0 200px; margin: 10px 10px; color: white;">&copy; USYD Robotics Club</b>
+`;
+setTimeout(() => {
+    document.body.appendChild(q);
+})
