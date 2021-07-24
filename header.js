@@ -59,6 +59,7 @@ document.querySelector("head").append(e);
 
 var q = document.createElement("div");
 q.classList.add("navbar");
+q.classList.add("header");
 
 function mkstring(arr) {
     let part = ``;
@@ -108,12 +109,15 @@ let goToSignup = () => {
 
 var q = document.createElement("div");
 q.classList.add("navbar");
-q.style.cssText = `
-display:flex; flex-direction: row;`
 q.innerHTML = `
 <span style="flex: 1 1 90%"></span>
 <b style = "text-align: right; flex: 0 0 200px; margin: 10px 10px; color: white;">&copy; USYD Robotics Club</b>
 `;
 document.addEventListener("DOMContentLoaded",()=>{
-    document.body.appendChild(q);
+    try{
+        // just for index
+        document.querySelector(".main").appendChild(q);
+    }catch(e){
+        document.body.appendChild(q);
+    }
 })

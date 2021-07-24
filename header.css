@@ -4,13 +4,16 @@
     display: flex;
     background-color: black;
     flex-direction: row;
-    position: sticky;
     width: 100%;
     top: 0px;
     left: 0px;
     background: black;
     border-radius: 0;
     margin: 0;
+}
+
+.navbar.header {
+    position: sticky;
 }
 
 body {
