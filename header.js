@@ -76,7 +76,7 @@ q.innerHTML = `
 ${mkstring(locations)}
 <div style="flex: 0 1 100%"></div>
 <button class="cta sponsorbutton" onclick="goToSponsor()">Sponsor Us</button>
-<button class="cta involvebutton" onclick="goToSignup()">Get Involved</button>
+<button class="cta involvebutton" onclick="goToSignup()">Sign Up!</button>
 `;
 
 document.body.appendChild(q);
