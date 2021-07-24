@@ -114,6 +114,6 @@ q.innerHTML = `
 <span style="flex: 1 1 90%"></span>
 <b style = "text-align: right; flex: 0 0 200px; margin: 10px 10px; color: white;">&copy; USYD Robotics Club</b>
 `;
-setTimeout(() => {
+document.addEventListener("DOMContentLoaded",()=>{
     document.body.appendChild(q);
 })
